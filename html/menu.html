@@ -1,0 +1,20 @@
+
+
+<!-- <div id="navlist"> -->
+  <ul class="solidblockmenu">
+    <li><a href="/index" name="l-menu-index"> <!-- TMPL_VAR i18n_menu_index --></a></li>
+    <li><a href="/news" name="l-menu-news"> <!-- TMPL_VAR i18n_menu_news --> </a></li>
+    <!-- TMPL_IF ident -->
+    <li><a href="/logout" name="l-menu-logout"> <!-- TMPL_VAR i18n_menu_logout --> </a></li>
+    <li><a href="/account" name="l-menu-account"> <!-- TMPL_VAR i18n_menu_account --> </a></li>
+    <li><a href="/events" name="l-menu-events"> <!-- TMPL_VAR i18n_menu_events --> </a></li>
+    <!-- TMPL_ELSE -->
+    <li><a href="/login" name="l-menu-login"> <!-- TMPL_VAR i18n_menu_login --> </a></li>
+    <!-- /TMPL_IF -->
+    <!-- TMPL_IF admin -->
+    <li><a href="/admin" name="l-menu-admin"> <!-- TMPL_VAR i18n_menu_admin --> </a></li>
+    <!-- /TMPL_IF -->
+    <!-- <li><a href="/dev"> API </a></li> -->
+    <li><a href="/about" name="l-menu-about"> <!-- TMPL_VAR i18n_menu_about --> </a></li>
+  </ul>
+<!-- </div> -->

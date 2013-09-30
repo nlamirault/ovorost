@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title> Ovorost </title>
+
+<link rel="stylesheet" type="text/css" href="/css/ovorost.css" />
+
+<script language="javascript" type="text/javascript">
+<!--
+
+
+function selectUser() {
+
+    var idUser = document.admin.user.options[document.admin.user.selectedIndex].value;
+    document.admin.id.value = idUser;
+    document.admin.submit();
+}
+
+// -->
+</script>
+
+</head>
+
+<body>
+
+<!-- TMPL_INCLUDE 'header.html' -->
+
+
+<div id="user-event">
+
+
+<div id="user-event-title">
+<!-- TMPL_VAR event_title -->
+[ <!-- TMPL_VAR begin --> - <!-- TMPL_VAR end --> ] :
+<!-- TMPL_VAR resort --> ( <!-- TMPL_VAR note --> )
+</div>
+<div id="user-event-content">
+  <!-- TMPL_VAR content -->
+</div>
+
+</div>
+
+
+
+
+<!-- TMPL_INCLUDE 'footer.html' -->
+

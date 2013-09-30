@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+   <title> Ovorost </title>
+   <link rel="stylesheet" type="text/css" href="/css/ovorost.css" />
+  </head>
+
+<body onload="document.getElementById('login').focus()">
+
+<!-- TMPL_INCLUDE 'header.html' -->
+
+
+<div id="errorMessage"> <!-- TMPL_VAR error_msg --> </div>
+
+
+<div id="formIdent">
+
+<form name="identify" method="post" action="identify">
+
+<div id="query"> <!-- TMPL_VAR i18n_login_email --> :
+<input type="text" name="login" id="login" class="email-entry" size="16" maxlength="32">
+</div>
+
+<div class="spacer">&nbsp;</div>
+
+<div id="query"> <!-- TMPL_VAR i18n_login_password --> :
+<input type="password" name="password" id="password" class="password-entry" size="16" maxlength="32">
+</div>
+<br/>
+
+<input type="image" src="/img/bt-<!-- TMPL_VAR lang -->-login.png" alt="Connect">
+
+
+<div id="sign">
+<!-- TMPL_VAR i18n_login_member --> ?
+<a href="/sign-up">
+<img src="/img/bt-<!-- TMPL_VAR lang -->-sign-up.png" alt="Sign up" border="0">
+</a>
+</div>
+
+</form>
+
+</div>
+
+<!-- TMPL_INCLUDE 'footer.html' -->
+
+</body>
+</html>
+

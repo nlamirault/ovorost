@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="shortcut icon" href="/img/favicon.ico">
+
+<meta name="Description" content="Ovorost" >
+<meta name="Keywords" content="Ovorost, ski, snow, montagne, api, social, informations, neige, poudreuse">
+<meta name="subject" content="Ovorost, website">
+
+
+<title> Ovorost </title>
+
+<link rel="stylesheet" type="text/css" href="/css/ovorost.css" />
+
+<!-- <link rel="stylesheet" type="text/css" href="/css/screensmall.css" media="screen" /> -->
+
+<script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=<!-- TMPL_VAR google_maps_key -->"
+        type="text/javascript">
+</script>
+
+<script type="text/javascript" src="/js/i18n.js"></script>
+<script type="text/javascript" src="/js/i18n_<!-- TMPL_VAR lang -->.js"></script>
+<script type="text/javascript" src="/js/ovorost.js"></script>
+
+<!-- <script src="/js/mootools.v1.11.js" type="text/javascript"></script> -->
+<!-- <script src="/js/moocheck.js" type="text/javascript"></script> -->
+
+</head>
+
+<body onLoad="createMap(<!-- TMPL_VAR latitude -->, <!-- TMPL_VAR longitude -->, <!-- TMPL_VAR level -->,<!-- TMPL_VAR user_lat -->, <!-- TMPL_VAR user_lng -->, '<!-- TMPL_VAR user_sex -->', '<!-- TMPL_VAR gravatar -->')" onunload="GUnload()"(>
+
+<!-- TMPL_INCLUDE 'header.html' -->
+
+<form name="map" method="post">
+
+<div id="select-data">
+<select name="countries" onChange="selectCountry()">
+<!-- TMPL_LOOP countries -->
+<option value="<!-- TMPL_VAR name -->" <!-- TMPL_VAR selected -->> <!-- TMPL_VAR name --></option>
+<!-- /TMPL_LOOP -->
+</select>
+
+<span id="resortsbar"></span>
+
+</div>
+
+<!-- TMPL_IF ident -->
+<div id="events">
+<input type="checkbox" onClick="getEvents();">
+  <!-- TMPL_VAR i18n_events -->
+  &nbsp;
+<span id="events_selection"></span>
+</div>
+<!-- /TMPL_IF -->
+
+<div id="regions">
+  <!-- TMPL_LOOP regions -->
+  <div id='region'>
+  <label class='f_checkbox'>
+  <input type='checkbox' onClick="setResorts('<!-- TMPL_VAR index -->','<!-- TMPL_VAR country -->','<!-- TMPL_VAR region_name -->')">  <!-- TMPL_VAR region_name -->
+  </label>
+  </div>
+  <!-- /TMPL_LOOP -->
+</div>
+
+
+<div id="spacer"> </div>
+
+<div id="map"></div>
+
+
+</form>
+
+
+<!-- TMPL_INCLUDE 'footer.html' -->

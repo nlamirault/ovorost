@@ -1,0 +1,659 @@
+/* OVOROST CSS */
+
+body
+{ 
+  margin: 0;
+  padding: 0;
+  /* font: 95% arial, hevetica, sans-serif; */
+  text-align: center;
+  color: #333;
+  background-color: #000000;
+  background: #000000 url("/images/icones/fond-body.jpg")     repeat-x top left;
+  font-family:  Myriad, 'Lucida Grande', 'Lucida Sans', Lucida, Helvetica, arial, sans-serif;
+  font-size:12px;
+  color: #FFFFFF;
+  font-weight: normal;
+  }
+
+
+
+#error-content { 
+                 padding: 70px;
+}
+
+
+.projectTitle { 
+                font-size: 30px;  
+                vertical-align: bottom;
+                padding-left: 30px;
+ }
+
+
+.version { 
+           font-size: 18px;
+           color: #FF0000;
+           vertical-align: bottom;
+           background-color: #FFFFFF;
+ }
+
+
+#header { margin: 20px }
+
+
+#footer { 
+  margin: 20px;
+  font-size: 98%;
+}
+
+#container { 
+  background-color: #FFFFFF;
+  color: #333;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+
+
+#mainhautgauche, #mainhautdroit, #mainbasgauche, #mainbasdroit { 
+  height: 19px;
+  width: 19px;
+  background-repeat: no-repeat;
+  font-size:1px; /* correction d'un bug IE */
+}                                                                 
+
+#mainhautgauche { 
+  background: url(/img/black-mainhautgauche.gif);
+}                  
+
+#mainhautdroit { 
+  float: right;
+  background: url(/img/black-mainhautdroit.gif);
+}                 
+
+#mainbasgauche { 
+  background: url(/img/black-mainbasgauche.gif);
+}                 
+
+#mainbasdroit { 
+  float: right;
+  background: url(/img/black-mainbasdroit.gif);
+}
+
+
+#map {
+  margin-left: auto;
+  margin-right: auto;
+  width: 700px;
+  height: 600px;
+ }
+
+
+#resortsbar { 
+           /*   float: left; */
+ }
+
+/* Onglets */
+
+
+#menu {
+        margin-top: 50px;
+}
+
+
+/* #navlist */
+/* {  */
+/*   background: black url(/img/blockdefault.gif) center center repeat-x; */
+/*  } */
+
+/* #navlist ul */
+/* { */
+
+/*   white-space: nowrap; */
+/*   padding: 0px; */
+/*   background: black url(/img/blockdefault.gif) center center repeat-x; */
+/* } */
+
+/* #navlist li */
+/* { */
+/*   display: inline; */
+/*   list-style-type: none; */
+/*   } */
+
+/* #navlist a */
+/* { */
+/*   padding: 1px 8px 1px 15px; */
+/*   border: 1px solid #333; */
+/*   /\* background-color: #999; *\/ */
+/*   background-color: #000000; */
+/* } */
+
+/* #navlist a:link, #navlist a:visited */
+/* { */
+/*   color: #EEE; */
+/*   text-decoration: none; */
+  
+/* } */
+
+/* #navlist a:hover */
+/* { */
+/*   border: 1px solid #333; */
+/*   /\* background-color: #FF6600; *\/ */
+/*   color: #FFFFFF; */
+/*   background: transparent url(/img/blockactive.gif) center center repeat-x;) */
+/* } */
+
+/* #navlist a:link, #active a:visited, #active a:hover */
+/* { */
+/*   border: 1px solid #333; */
+/*   /\* background-color: #FF6600; *\/ */
+/*   color: #FFFFFF; */
+
+/*   } */
+
+
+/*Credits: Dynamic Drive CSS Library */
+/*URL: http://www.dynamicdrive.com/style/ */
+
+.solidblockmenu
+{ 
+  margin: 0px;
+  padding: 0px;
+  float: left;
+  font: bold 13px Arial;
+  width: 100%;
+  border: 1px solid #625e00;
+  border-width: 1px 0;
+  background: black url(/img/blockdefault.gif) center center repeat-x;
+  }
+                 
+
+.solidblockmenu li
+{ 
+  display: inline;
+  }
+                    
+
+.solidblockmenu li a
+{ 
+  float: left;
+  color: white;
+  padding: 9px 11px;
+  text-decoration: none;
+  border-right: 1px solid white;
+  }
+                      
+
+.solidblockmenu li a:visited
+{ 
+  color: white;
+  }
+                              
+
+.solidblockmenu li a:hover, .solidblockmenu li .current
+{ 
+  color: white;
+  background: transparent url(/img/blockactive.gif) center center repeat-x;
+  }
+
+
+#events { 
+          padding-bottom: 5px;
+}
+
+#select-data {
+        margin-top: 80px;
+}
+
+
+
+#regions { 
+           padding: 30px 20px 50px 20px;
+           margin: 0px 0px 50px 50px;
+}
+
+#regions ul { list-style:none; }
+
+#regions li { float:left; }
+
+#region { 
+          float: left;
+          width: 200px;
+          border: 0px solid #999;
+          margin: 0px 0px 0px 0px;
+          text-align: left;
+          }
+
+
+#spacer {  clear: both;  }
+
+
+/* About */
+
+#about
+ { 
+   padding: 70px;
+   text-align: left;
+}
+
+#stat
+{ 
+  padding: 30px;
+}
+
+
+#about-select-data
+{
+  margin-top: 30px;
+}
+
+
+
+
+/* News */
+
+#news
+ { 
+   padding: 70px;
+}
+
+#news-title
+{ 
+  text-align: left;
+  font-size: 16px;
+  color: blue;
+}
+
+#news-item
+{ 
+  padding: 30px;
+}
+
+
+
+
+/* Authentification */
+
+
+#formIdent { 
+             padding: 70px;
+}
+
+.email-entry, .password-entry
+{ 
+  width:162px;
+  height:16px;
+  border: 1px #dedbca solid;
+  background-color:#f6f5f0;
+  color: #000000;
+  font-size:14px;
+  }
+                   
+.password-text
+{
+  margin-bottom:6px;
+}
+
+.email-text
+{
+  margin: 62px 0 6px 0;
+  padding: 4px
+}
+
+
+#sign
+{ 
+  padding-top: 50px;
+ }
+
+
+#signup
+{ 
+  padding-top: 50px;
+  margin-left: 150px;
+ }
+
+
+#user-info
+{ 
+  background-color: #FCFFCF;
+  width: 350px;
+  border: 1px solid #BFBFBF;
+  padding: 10px;
+  margin: 0px 0px 0px 40px;
+  text-align: right;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+#captcha
+{ 
+  margin-left: 210px;
+  padding-bottom: 20px;
+ }
+
+
+
+/* Account */
+
+#account
+{ 
+  padding: 70px;
+}
+
+#account-info
+{ 
+  text-align: left;
+  background-color: #FCFFCF;
+  width: 200px;
+  border: 1px solid #BFBFBF;
+  padding: 2px;
+  font-family: Arial, Helvetica, sans-serif;
+ }
+
+
+#user-account
+{ 
+  width: auto;
+  height: 70px;
+ }
+
+
+#user-account-data
+{ 
+  float:left;
+ }
+
+#user-account-gravatar
+{ 
+  width: 300px;
+  height: 50px;
+  float: right;
+ }
+
+
+#welcome { 
+           padding-bottom: 40px;
+}
+
+table { 
+        border-collapse: collapse;
+}        
+
+th { 
+     border: thin solid #000000;
+     background-color: #FCFFCF;
+     /* background-color:  #FF6600; */
+     color: #000000;
+}     
+
+td { 
+     /* border: thin solid #6495ed; */
+}
+
+
+
+#user-stats
+{ 
+  padding: 20px;
+ }
+
+
+
+/* Users Tags */
+
+#tags
+ { 
+   padding-top: 60px;
+}
+
+#tag-item
+{ 
+  text-align: left;
+  padding-left: 15px;
+}
+
+
+
+
+
+/* API */
+
+#about-api
+ { 
+   padding: 60px 40px 0px 40px;
+   text-align: left;
+}
+
+
+#api-request
+{ 
+  padding: 20px;
+  text-align: left;
+ }
+
+#api-title
+{ 
+  margin: 0 16px;
+  background-color: #eeeeee;
+  border: solid 1px #d0d0d0;
+  padding: 4px;
+ }
+
+#api-desc
+{ 
+  margin: 0 16px;
+ }
+
+
+
+/* Admin */
+
+#administration
+{ 
+  padding: 70px;
+}
+
+
+#admin-user
+{ 
+  padding-top: 50px;
+  margin-left: 70px;
+ }
+
+
+#admin-user-info
+{ 
+  background-color: #FCFFCF;
+  width: 350px;
+  border: 1px solid #BFBFBF;
+  padding: 10px;
+  margin: 0px 0px 0px 40px;
+  text-align: right;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+#admin-events
+{ 
+  padding: 0px 20px 20px 0px;
+  margin-left: 70px;
+  /* margin-left: 200px; */
+  width: 600px;
+ }
+
+
+
+/* Events */
+
+
+#events { 
+         padding-top: 50px;
+}
+
+#user-events
+{ 
+  padding-bottom: 20px;
+  text-align: left;
+}
+
+#user-events ul { list-style-type: none; }
+#user-events li { display: block; }
+
+#event-info
+{ 
+  background-color: #FCFFCF;
+  width: 500px;
+  border: 1px solid #BFBFBF;
+  padding: 10px;
+  margin: 0px 0px 0px 40px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: left;
+}
+
+
+
+/* User event */
+
+
+#user-event
+{ 
+  margin: 100px 0px 50px 0px;
+}
+
+
+#user-event-message
+{ 
+  margin-top: 20px;
+ }
+
+#user-event-title
+ { 
+   border: thin solid #000000;
+   background-color: #FCFFCF;
+   color: #000000;
+   margin: 20px 20px 0px 20px;
+   width: 500px;
+   text-align: left;
+   padding: 2px;
+}
+
+#user-event-content
+{ 
+  margin: 20px;
+  text-align: left;
+ }
+
+
+
+/* Tags */
+
+
+#events-tags ul
+{ 
+  background-color: #FCFFCF;
+  width: 600px;
+  border: 1px solid #BFBFBF;
+  padding: 2px;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  }
+
+#events-tags li { 
+                  display: inline;
+                  background: none;
+}
+
+#events-tags a { 
+                 text-decoration:none;
+}
+              
+#events-tags a:hover {
+                       text-decoration:none;
+                       background-color:#DDDDDD;
+                       color:#FFFFFF;
+                       }
+
+.tag1 { font-size: 100%; }
+.tag2 { font-size: 100%; }
+.tag3 { font-size: 100%; }
+
+
+
+/* Resort informations */
+
+#slope_info
+{ 
+  text-align: center;
+  }
+
+
+#slope_black
+{ 
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 7pt;
+  background-color:#000000;
+  color: #FFFFFF;
+  font-weight: bold;
+  width: 40px;
+  text-align: left;
+  margin: 2px;
+  padding: 1px;
+  }                
+            
+#slope_red
+{ 
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 7pt;
+  background-color:#FF0000;
+  color: #FFFFFF;
+  font-weight: bold;
+  width: 40px;
+  text-align: left;
+  margin: 2px;
+  padding: 1px;
+  }                          
+            
+#slope_blue
+{ 
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 7pt;
+  background-color:#0000FF;
+  color: #FFFFFF;
+  font-weight: bold;
+  width: 40px;
+  text-align: left;
+  margin: 2px;
+  padding: 1px;
+  }
+            
+#slope_green
+{ 
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 7pt;
+  background-color:#009933;
+  color: #FFFFFF;
+  font-weight: bold;
+  width: 40px;
+  text-align: left;
+  margin: 2px;
+  padding: 1px;
+  }
+
+
+
+
+
+/* ---------------- */
+/* fancyform styles */
+/* ---------------- */
+
+
+/* FancyForm styles */
+.f_checkbox,.f_radio{background-repeat:no-repeat;background-position:3px center;height:16px;display:block;cursor:pointer;cursor:hand;line-height:120%}
+/* .f_radio{padding:4px 24px} */
+.f_checkbox{padding: 0.1em 20px}
+
+

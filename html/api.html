@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title> Ovorost </title>
+
+<link rel="stylesheet" type="text/css" href="/css/ovorost.css" />
+
+<script language="javascript" type="text/javascript">
+<!--
+
+// -->
+</script>
+
+</head>
+
+<body>
+
+<!-- TMPL_INCLUDE 'header.html' -->
+
+<div id="about-api">
+The <b> Ovorost </b> Application Programming Interface (API) let developpers
+interact  programmatically with  <b>Ovorost </b>.  The API  offers two
+response types: XML (default output format) and JSON. Each request take a
+'format' parameter to specify the output.<br/>
+Available <b> as soon as possible</b>.
+</div>
+
+<div id="api-request">
+<div id="api-title"> <b> GET </b> /api/version </div>
+<div id="api-desc">Retreive Ovorost version.</div>
+</div>
+
+<div id="api-request">
+<div id="api-title"> <b> GET </b> /api/news </div>
+<div id="api-desc">Get Ovorost news.</div>
+</div>
+
+<div id="api-request">
+<div id="api-title"> <b> GET </b> /api/user-infos </div>
+<div id="api-desc">Get informations about an user.<br/>
+Parameter :
+  <ul>
+    <li> email of the user.</li>
+  </ul>
+</div>
+</div>
+
+<div id="api-request">
+<div id="api-title"> <b> POST </b> /api/user-infos </div>
+<div id="api-desc">Update informations about an user.<br/>
+Parameters :
+  <ul> 
+    <li> email of the user. </li>
+    <li> password </li>
+    <li> first-name </li>
+    <li> last-name </li>
+    <li> longitude </li>
+    <li> latitude </li>
+    <li> sex </li>
+  </ul>
+</div>
+</div>
+
+<div id="api-request">
+<div id="api-title"> <b> GET </b> /api/event </div>
+<div id="api-desc">Get user's ski events.<br/>
+Parameter :
+  <ul>
+    <li> email : email of the user. </li>
+  </ul>
+</div>
+</div>
+
+
+<div id="api-request">
+<div id="api-title"> <b> GET </b> /api/resorts </div>
+<div id="api-desc">Get informations about a ski resorts.<br/>
+Parameter :
+  <ul>
+    <li> name : the resort's name.</li>
+  </ul>
+</div>
+</div>
+
+
+
+<!-- TMPL_INCLUDE 'footer.html' -->
+

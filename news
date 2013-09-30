@@ -1,0 +1,92 @@
+-------------
+-- Ovorost --
+-------------
+
+* Italy *
+  Add Italy ski resorts.
+
+* Unit Tests / Coverage *
+  Add some unit tests and implements a tool for coverage report.
+
+* Recaptcha *
+  Implements ReCaptcha API for the signup page.
+
+* Gravatar *
+  Add support for the Gravatar system.
+
+* i18n *
+  Add i18n support (english and french)
+
+
+
+** Version 0.3 **
+
+* API, Login links *
+  Remove API and login links
+
+* Tags *
+  Implements  system to  display all  events which  have a  common tag
+  name.
+
+* Events *
+  Specify  if  an event  is  public or  not.  Update  user's feed  and
+  get-events method to retrieve only public events.
+
+* Feeds *
+  Implements user and news feeds (RSS 2.0 format)
+
+* Client API *
+  Beginning of a client API using REST architecture.
+
+* Unit Tests *
+  Implements some unit tests (configuration ,users, resort-infos, ...)
+
+
+
+** Version 0.2 **
+
+* Adminstration *
+  Add a adminstration script to manage the web server.
+
+* Administration *
+  Implements  an  administration  console  which  could  update  users
+  informations.
+
+* Ajax user Events *
+  Each user could add ski events and display them on the map.
+
+
+
+** Version 0.1 **
+
+* Events *
+  Implements user's events and tags.
+
+* User *
+  Add user identification, and display user's events on map.
+
+* PostgreSQL *
+  Replace cl-prevalence by a PostgreSQL database backend.
+
+* Drakma *
+  Use Drakma (http://weitz.de/drakma/) for the HTTP request.
+
+* Ajax *
+  Implements with code stolen from cl-ajax an Ajax tool for Hunchentoot.
+
+* Multiple countries *
+  Start to retreive informations for others countries. Map is located in
+  center of the selected country.
+
+* Database *
+  Implements a database of ski resorts.
+
+* French ski resorts *
+  Could place on a Google Map french ski resorts. Database is in XML files.
+
+
+
+Local variables:
+mode: outline
+paragraph-separate: "[  ^L]*$"
+end:

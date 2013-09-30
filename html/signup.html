@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title> Ovorost </title>
+
+<link rel="stylesheet" type="text/css" href="/css/ovorost.css" />
+
+<script language="javascript" type="text/javascript">
+<!--
+
+// -->
+</script>
+
+</head>
+
+<body onload="document.getElementById('email').focus()">
+
+<!-- TMPL_INCLUDE 'header.html' -->
+
+<form name="add-user" method="post" action="add-user">
+
+<div id="signup">
+
+<div id="user-info"> <!-- TMPL_VAR i18n_email --> :
+<input type="text" name="email" id="email" class="entry-info" size="30" maxlength="30">
+</div>
+
+<div id="user-info"> <!-- TMPL_VAR i18n_password --> :
+<input type="text" name="password" class="entry-info" size="30" maxlength="30">
+</div>
+
+<div id="user-info"> <!-- TMPL_VAR i18n_confirm_password --> :
+<input type="text" name="confirm-passwd" class="entry-info" size="30" maxlength="30">
+</div>
+
+<div id="user-info"> <!-- TMPL_VAR i18n_firstname --> :
+<input type="text" name="first-name" class="entry-info" size="30" maxlength="30">
+</div>
+
+<div id="user-info"> <!-- TMPL_VAR i18n_lastname --> :
+<input type="text" name="last-name" class="entry-info" size="30" maxlength="30">
+</div>
+
+<div id="user-info"> <!-- TMPL_VAR i18n_latitude --> :
+<input type="text" name="latitude" class="entry-info" size="30" maxlength="30">
+</div>
+
+<div id="user-info"> <!-- TMPL_VAR i18n_longitude --> :
+<input type="text" name="longitude" class="entry-info" size="30" maxlength="30">
+</div>
+
+<div id="user-info"> <!-- TMPL_VAR i18n_sex --> :
+<select name="sex">
+<option value="M"> <!-- TMPL_VAR i18n_male --> </option>
+<option value="F"> <!-- TMPL_VAR i18n_female --></option>
+</select>
+</div>
+
+<br/>
+
+</div>
+
+<div id="captcha">
+
+
+<script type="text/javascript"
+   src="http://api.recaptcha.net/challenge?k=<!-- TMPL_VAR captcha_public -->">
+</script>
+
+
+</div>
+  
+<input type="image" src="/img/bt-<!-- TMPL_VAR lang -->-sign-up.png" alt="Sign up">
+
+</form>
+
+
+<!-- TMPL_INCLUDE 'footer.html' -->
+

@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title> Ovorost </title>
+
+<link rel="stylesheet" type="text/css" href="/css/ovorost.css" />
+
+<script language="javascript" type="text/javascript">
+<!--
+
+// -->
+</script>
+
+</head>
+
+<body>
+
+<!-- TMPL_INCLUDE 'header.html' -->
+
+<div id="news">
+
+<div id="news-title">
+  Ovorost 
+  <a href="/feeds/news"> <img src="/img/feed.png" border="0" alt="news feed"> </a>
+</div>
+  
+<!-- TMPL_LOOP news -->
+<div id="news-item">
+<!-- TMPL_VAR news_title --> [<!-- TMPL_VAR news_date --> ]<br/>
+<!-- TMPL_VAR news_content -->
+</div>
+<!-- /TMPL_LOOP -->
+  
+</div>
+
+<!-- TMPL_INCLUDE 'footer.html' -->
+

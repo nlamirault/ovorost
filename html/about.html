@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title> Ovorost </title>
+
+<link rel="stylesheet" type="text/css" href="/css/ovorost.css" />
+
+<script type="text/javascript" src="/js/i18n.js"></script>
+<script type="text/javascript" src="/js/i18n_<!-- TMPL_VAR lang -->.js"></script>
+<script type="text/javascript" src="/js/ovorost.js"></script> 
+
+</head>
+
+<body>
+
+<!-- TMPL_INCLUDE 'header.html' -->
+
+<div id="about">
+<b>Ovorost</b> <!-- TMPL_VAR i18n_about_text -->
+</div>
+
+
+<div id="stat">
+<img src="<!-- TMPL_VAR countries_resorts -->" alt="Resorts by country" />
+</div>
+
+
+<form name="aboutForm" method="post">
+
+<div id="abount-select-data">
+<select name="countries" onChange="selectCountryStats()">
+<!-- TMPL_LOOP countries -->
+<option value="<!-- TMPL_VAR name -->" <!-- TMPL_VAR selected -->> <!-- TMPL_VAR name --></option>
+<!-- /TMPL_LOOP -->
+</select>
+
+</form>
+
+<div id="stat">
+<img src="<!-- TMPL_VAR country_resorts -->" alt="Country resorts" />
+</div>
+  
+
+
+<!-- TMPL_INCLUDE 'footer.html' -->
+

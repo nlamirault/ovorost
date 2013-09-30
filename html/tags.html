@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title> Ovorost </title>
+
+<link rel="stylesheet" type="text/css" href="/css/ovorost.css" />
+
+<script language="javascript" type="text/javascript">
+<!--
+
+// -->
+</script>
+
+</head>
+
+<body>
+
+<!-- TMPL_INCLUDE 'header.html' -->
+
+<div id="tags">
+
+  <h2> Events </h2>
+
+<!-- TMPL_LOOP tags -->
+<div id="tag-item">
+<a href="/show-event?id=<!-- TMPL_VAR id -->"> <!-- TMPL_VAR title --> </a>
+</div>
+<!-- /TMPL_LOOP -->
+  
+</div>
+
+<!-- TMPL_INCLUDE 'footer.html' -->
+

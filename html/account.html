@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title> Ovorost </title>
+
+<link rel="stylesheet" type="text/css" href="/css/ovorost.css" />
+
+<script language="javascript" type="text/javascript">
+<!--
+
+// -->
+</script>
+
+</head>
+
+<body>
+
+<!-- TMPL_INCLUDE 'header.html' -->
+
+
+<div id="account">
+
+
+<div id="welcome">
+  <b><!-- TMPL_VAR first_name --> </b>
+  &nbsp;
+  <a href="/feeds/user?email=<!-- TMPL_VAR email -->">
+  <img src="/img/feed.png" border="0" alt="news feed">
+  </a>
+  &nbsp;
+  Ovorost's account
+</div>
+
+
+
+<div id="user-account">
+
+<div id="user-account-data">
+  
+<div id="account-info">
+  <b> <!-- TMPL_VAR i18n_firstname --> </b> : <!-- TMPL_VAR first_name -->
+</div>
+<div id="account-info">
+  <b> <!-- TMPL_VAR i18n_lastname -->  </b> : <!-- TMPL_VAR last_name -->
+</div>
+<div id="account-info">
+  <b> <!-- TMPL_VAR i18n_email -->  </b> : <!-- TMPL_VAR email -->
+</div>
+<div id="account-info">
+  <b> <!-- TMPL_VAR i18n_localization -->  </b> : <!-- TMPL_VAR latitude --> / <!-- TMPL_VAR longitude -->
+</div>
+
+</div>
+
+<div id="user-account-gravatar">
+<img src="<!-- TMPL_VAR gravatar -->">
+  &nbsp;&nbsp;
+  <!-- TMPL_VAR i18n_gravatar --> <a href="http://www.gravatar.com"> Gravatar </a>
+</div>
+  
+</div>
+
+<br>
+
+<div id="events-tags">
+  <h2> Tags </h2>
+  <ul>
+    <!-- TMPL_LOOP tags -->
+    <li><a href="/tags?name=<!-- TMPL_VAR tag_name -->" title="<!-- TMPL_VAR tag_name -->" class="tag<!-- TMPL_VAR tag_size -->"><!-- TMPL_VAR tag_name --> </a></li>
+    <!-- /TMPL_LOOP -->
+  </ul>
+</div>
+
+<div id="user-stats">
+  <h2> Stats </h2>
+
+<img src="<!-- TMPL_VAR pie_events_uri -->" alt="User events" />
+
+
+</div>
+
+
+
+</div>
+
+
+<!-- TMPL_INCLUDE 'footer.html' -->
+

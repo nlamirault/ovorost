@@ -1,0 +1,1142 @@
+(
+(:RESULTS-FOR "/home/nicolas/src/ovorost/etc/lift-standard.config")
+(:ARGUMENTS (:SUITE OVOROST-TEST :RESULT
+             #</home/nicolas/src/ovorost/etc/lift-standard.config: no tests defined>))
+(:FEATURES (:KMR-NORMAL-ESDC :KMR-NORMAL-DSDC :KMR-NORMAL-CESD :SPLIT-SEQUENCE
+            :HTML-TEMPLATE :HUNCHENTOOT
+            :HUNCHENTOOT-SBCL-DEBUG-PRINT-VARIABLE-ALIST
+            :HUNCHENTOOT-SBCL-WITH-TIMEOUT :URL-REWRITE CFFI-FEATURES:X86
+            CFFI-FEATURES:UNIX :CFFI :CL-PPCRE :CHUNGA :FLEXI-STREAMS
+            :RUNE-IS-CHARACTER :SB-BSD-SOCKETS-ADDRINFO :ASDF :CLC-OS-DEBIAN
+            :COMMON-LISP-CONTROLLER :SB-FUTEX :SB-THREAD :ANSI-CL :COMMON-LISP
+            :SBCL :UNIX :SB-DOC :SB-TEST :SB-LDB :SB-PACKAGE-LOCKS :SB-UNICODE
+            :SB-EVAL :SB-SOURCE-LOCATIONS :IEEE-FLOATING-POINT :X86 :ELF :LINUX
+            :LARGEFILE :GENCGC :STACK-GROWS-DOWNWARD-NOT-UPWARD
+            :C-STACK-IS-CONTROL-STACK :STACK-ALLOCATABLE-CLOSURES
+            :ALIEN-CALLBACKS :LINKAGE-TABLE :OS-PROVIDES-DLOPEN
+            :OS-PROVIDES-PUTWC))
+(:DATETIME 3413906369)
+)
+(
+(:suite OVOROST-WEB-TEST)
+(:name ABOUT-PAGE)
+(:START-TIME-UNIVERSAL 3413906369)
+(:END-TIME-UNIVERSAL 3413906380)
+(:PROBLEM-KIND "Error")
+(:PROBLEM-STEP :TESTING)
+(:PROBLEM-CONDITION "#<USOCKET:CONNECTION-REFUSED-ERROR {A924281}>")
+(:PROBLEM-CONDITION-DESCRIPTION "Condition USOCKET:CONNECTION-REFUSED-ERROR was signalled.")
+(:PROBLEM-BACKTRACE "0: (BACKTRACE 536870911 #<SB-IMPL::STRING-OUTPUT-STREAM {A924601}>)
+1: (LIFT::GET-BACKTRACE #<unavailable argument>)
+2: ((LAMBDA (CONDITION)) #<USOCKET:CONNECTION-REFUSED-ERROR {A924281}>)
+3: ((LAMBDA (CONDITION)) #<USOCKET:CONNECTION-REFUSED-ERROR {A924281}>)
+4: (SIGNAL #<USOCKET:CONNECTION-REFUSED-ERROR {A924281}>)
+5: (ERROR USOCKET:CONNECTION-REFUSED-ERROR)
+6: (USOCKET::HANDLE-CONDITION
+    #<SB-BSD-SOCKETS:CONNECTION-REFUSED-ERROR {A923FF1}>
+    #<USOCKET:STREAM-USOCKET {C0A36B1}>)
+7: (USOCKET:SOCKET-CONNECT \"localhost\" 4444)
+8: (DRAKMA:HTTP-REQUEST
+    #<PURI:URI http://localhost:4444/selenium-server/driver?cmd=getNewBrowserSession&1=*firefox&2=http%3A%2F%2Flocalhost%3A7777>)
+9: (SELENIUM::EXECUTE
+    #<PURI:URI http://localhost:4444/selenium-server/driver?cmd=getNewBrowserSession&1=*firefox&2=http%3A%2F%2Flocalhost%3A7777>)
+10: ((SB-PCL::FAST-METHOD LIFT::LIFT-TEST
+      (OVOROST-TEST::OVOROST-WEB-TEST (EQL 'OVOROST-TEST::ABOUT-PAGE)))
+     #<unavailable argument>
+     #<unavailable argument>
+     #<unavailable argument>
+     #<unavailable argument>)
+11: ((SB-PCL::FAST-METHOD LIFT::RUN-TEST-INTERNAL (LIFT:TEST-MIXIN SYMBOL T))
+     #<unavailable argument>
+     #<unavailable argument>
+     #<OVOROST-TEST::OVOROST-WEB-TEST OVOROST-WEB-TEST {B57BC41}>
+     OVOROST-TEST::ABOUT-PAGE
+     #</home/nicolas/src/ovorost/etc/lift-standard.config: no tests defined>)
+12: ((SB-PCL::FAST-METHOD LIFT::TESTSUITE-RUN
+      (LIFT:TEST-MIXIN LIFT::TEST-RESULT))
+     #<unavailable argument>
+     #<unavailable argument>
+     #<OVOROST-TEST::OVOROST-WEB-TEST OVOROST-WEB-TEST {B57BC41}>
+     #</home/nicolas/src/ovorost/etc/lift-standard.config: no tests defined>)
+13: ((SB-PCL::FAST-METHOD LIFT::DO-TESTING (LIFT:TEST-MIXIN T T))
+     #<unavailable argument>
+     #<unavailable argument>
+     #<unavailable argument>
+     #</home/nicolas/src/ovorost/etc/lift-standard.config: no tests defined>
+     #<CLOSURE (LAMBDA #) {B57EBE5}>)
+14: ((SB-PCL::FAST-METHOD LIFT::DO-TESTING-IN-ENVIRONMENT
+      (LIFT:TEST-MIXIN T T))
+     #<unavailable argument>
+     #<unavailable argument>
+     #<OVOROST-TEST::OVOROST-WEB-TEST OVOROST-WEB-TEST {B57BC41}>
+     #</home/nicolas/src/ovorost/etc/lift-standard.config: no tests defined>
+     #<CLOSURE (LAMBDA #) {B57EBE5}>)
+15: ((SB-PCL::FAST-METHOD LIFT::DO-TESTING-IN-ENVIRONMENT :AROUND
+      (LIFT:TEST-MIXIN T T))
+     #<unavailable argument>
+     #S(SB-PCL::FAST-METHOD-CALL
+        :FUNCTION #<FUNCTION #>
+        :PV-CELL NIL
+        :NEXT-METHOD-CALL NIL
+        :ARG-INFO (3))
+     #<OVOROST-TEST::OVOROST-WEB-TEST OVOROST-WEB-TEST {B57BC41}>
+     #</home/nicolas/src/ovorost/etc/lift-standard.config: no tests defined>
+     #<CLOSURE (LAMBDA #) {B57EBE5}>)
+16: ((SB-PCL::FAST-METHOD LIFT::RUN-TESTS-INTERNAL (LIFT:TEST-MIXIN))
+     #<unavailable argument>
+     #<unavailable argument>
+     #<OVOROST-TEST::OVOROST-WEB-TEST OVOROST-WEB-TEST {B57BC41}>)
+17: ((SB-PCL::FAST-METHOD LIFT::RUN-TESTS-INTERNAL (SYMBOL))
+     #<unavailable argument>
+     #<unavailable argument>
+     OVOROST-TEST::OVOROST-WEB-TEST)
+18: ((SB-PCL::FAST-METHOD LIFT::TESTSUITE-RUN
+      (LIFT:TEST-MIXIN LIFT::TEST-RESULT))
+     #<unavailable argument>
+     #<unavailable argument>
+     #<OVOROST-TEST::OVOROST-TEST OVOROST-TEST {B3F3629}>
+     #</home/nicolas/src/ovorost/etc/lift-standard.config: no tests defined>)
+19: ((SB-PCL::FAST-METHOD LIFT::DO-TESTING (LIFT:TEST-MIXIN T T))
+     #<unavailable argument>
+     #<unavailable argument>
+     #<unavailable argument>
+     #</home/nicolas/src/ovorost/etc/lift-standard.config: no tests defined>
+     #<CLOSURE (LAMBDA #) {B3F7AE5}>)
+20: ((SB-PCL::FAST-METHOD LIFT::DO-TESTING-IN-ENVIRONMENT
+      (LIFT:TEST-MIXIN T T))
+     #<unavailable argument>
+     #<unavailable argument>
+     #<OVOROST-TEST::OVOROST-TEST OVOROST-TEST {B3F3629}>
+     #</home/nicolas/src/ovorost/etc/lift-standard.config: no tests defined>
+     #<CLOSURE (LAMBDA #) {B3F7AE5}>)
+21: ((SB-PCL::FAST-METHOD LIFT::DO-TESTING-IN-ENVIRONMENT :AROUND
+      (LIFT:TEST-MIXIN T T))
+     #<unavailable argument>
+     #S(SB-PCL::FAST-METHOD-CALL
+        :FUNCTION #<FUNCTION #>
+        :PV-CELL NIL
+        :NEXT-METHOD-CALL NIL
+        :ARG-INFO (3))
+     #<OVOROST-TEST::OVOROST-TEST OVOROST-TEST {B3F3629}>
+     #</home/nicolas/src/ovorost/etc/lift-standard.config: no tests defined>
+     #<CLOSURE (LAMBDA #) {B3F7AE5}>)
+22: ((SB-PCL::FAST-METHOD LIFT::RUN-TESTS-INTERNAL (LIFT:TEST-MIXIN))
+     #<unavailable argument>
+     #<unavailable argument>
+     #<OVOROST-TEST::OVOROST-TEST OVOROST-TEST {B3F3629}>)
+23: ((SB-PCL::FAST-METHOD LIFT::RUN-TESTS-INTERNAL (SYMBOL))
+     #<unavailable argument>
+     #<unavailable argument>
+     OVOROST-TEST)
+24: (LIFT:RUN-TESTS)
+25: (LIFT::%RUN-TESTS-FROM-FILE
+     \"/home/nicolas/src/ovorost/etc/lift-standard.config\")
+26: (LIFT::RUN-TESTS-FROM-FILE #<unavailable argument>)
+27: (LIFT:RUN-TESTS)
+28: (SB-INT:SIMPLE-EVAL-IN-LEXENV
+     (OVOROST-TEST:RUN-OVOROST-TEST)
+     #<NULL-LEXENV>)
+29: (SWANK::EVAL-REGION
+     \"(ovorost-test:run-ovorost-test)
+\")
+30: ((LAMBDA ()))
+31: (SWANK::TRACK-PACKAGE #<CLOSURE (LAMBDA #) {AE171B5}>)
+32: ((LAMBDA (SWANK-BACKEND::FN)) #<CLOSURE (LAMBDA #) {AE1719D}>)
+33: (SWANK::CALL-WITH-BUFFER-SYNTAX #<CLOSURE (LAMBDA #) {AE1719D}>)
+34: (SWANK::REPL-EVAL
+     \"(ovorost-test:run-ovorost-test)
+\")
+35: (SB-INT:SIMPLE-EVAL-IN-LEXENV
+     (SWANK:LISTENER-EVAL \"(ovorost-test:run-ovorost-test)
+\")
+     #<NULL-LEXENV>)
+36: ((LAMBDA ()))
+37: ((LAMBDA (SWANK-BACKEND::HOOK SWANK-BACKEND::FUN))
+     #<FUNCTION SWANK:SWANK-DEBUGGER-HOOK>
+     #<CLOSURE (LAMBDA #) {AE16BE5}>)
+38: ((LAMBDA ()))
+39: ((LAMBDA (SWANK-BACKEND::HOOK SWANK-BACKEND::FUN))
+     #<FUNCTION SWANK:SWANK-DEBUGGER-HOOK>
+     #<FUNCTION (LAMBDA #) {AB0BE4D}>)
+40: (SWANK::CALL-WITH-REDIRECTED-IO
+     #<SWANK::CONNECTION {ADB1271}>
+     #<CLOSURE (LAMBDA #) {AE15915}>)
+41: (SWANK::CALL-WITH-CONNECTION
+     #<SWANK::CONNECTION {ADB1271}>
+     #<FUNCTION (LAMBDA #) {AB0BE4D}>)
+42: (SWANK::HANDLE-REQUEST #<SWANK::CONNECTION {ADB1271}>)
+43: (SWANK::PROCESS-AVAILABLE-INPUT
+     #<SB-SYS:FD-STREAM for \"a constant string\" {ADB0109}>
+     #<CLOSURE (LAMBDA #) {AE158AD}>)
+44: ((FLET SWANK::HANDLER))
+45: ((LAMBDA (SWANK-BACKEND::_)) #<unused argument>)
+46: (SB-IMPL::SUB-SERVE-EVENT NIL NIL NIL)
+47: (SB-SYS:WAIT-UNTIL-FD-USABLE 0 :INPUT NIL)
+48: (SB-IMPL::REFILL-BUFFER/FD
+     #<SB-SYS:FD-STREAM for \"standard input\" {A803A69}>)
+49: (SB-IMPL::INPUT-CHAR/LATIN-9
+     #<SB-SYS:FD-STREAM for \"standard input\" {A803A69}>
+     NIL
+     #:EOF-OBJECT)
+50: (READ-CHAR
+     #<SB-SYS:FD-STREAM for \"standard input\" {A803A69}>
+     NIL
+     #:EOF-OBJECT
+     #<unused argument>)
+51: (READ-CHAR
+     #<SYNONYM-STREAM :SYMBOL SB-SYS:*STDIN* {9116E01}>
+     NIL
+     #:EOF-OBJECT
+     #<unused argument>)
+52: (READ-PRESERVING-WHITESPACE
+     #<SYNONYM-STREAM :SYMBOL SB-SYS:*STDIN* {9116E01}>
+     NIL
+     (NIL)
+     T)
+53: (READ-PRESERVING-WHITESPACE
+     #<SYNONYM-STREAM :SYMBOL SB-SYS:*STDIN* {9116E01}>
+     NIL
+     (NIL)
+     NIL)
+54: (READ #<SYNONYM-STREAM :SYMBOL SB-SYS:*STDIN* {9116E01}> NIL (NIL) NIL)
+55: (SB-IMPL::REPL-READ-FORM-FUN
+     #<SYNONYM-STREAM :SYMBOL SB-SYS:*STDIN* {9116E01}>
+     #<unavailable argument>)
+56: (SB-IMPL::REPL-FUN NIL)
+57: (SB-IMPL::REPL-FUN NIL)
+58: ((LAMBDA ()))
+59: ((LAMBDA ()))
+60: (SB-IMPL::%WITH-REBOUND-IO-SYNTAX #<CLOSURE (LAMBDA #) {AF8D6BD}>)
+61: (SB-IMPL::TOPLEVEL-REPL NIL)
+62: (SB-IMPL::TOPLEVEL-INIT)
+63: ((LABELS SB-IMPL::RESTART-LISP))
+"))
+(
+(:suite OVOROST-WEB-TEST)
+(:name INDEX-PAGE)
+(:START-TIME-UNIVERSAL 3413906380)
+(:END-TIME-UNIVERSAL 3413906380)
+(:PROBLEM-KIND "Error")
+(:PROBLEM-STEP :TESTING)
+(:PROBLEM-CONDITION "#<USOCKET:CONNECTION-REFUSED-ERROR {B0A1009}>")
+(:PROBLEM-CONDITION-DESCRIPTION "Condition USOCKET:CONNECTION-REFUSED-ERROR was signalled.")
+(:PROBLEM-BACKTRACE "0: (BACKTRACE 536870911 #<SB-IMPL::STRING-OUTPUT-STREAM {B0A1349}>)
+1: (LIFT::GET-BACKTRACE #<unavailable argument>)
+2: ((LAMBDA (CONDITION)) #<USOCKET:CONNECTION-REFUSED-ERROR {B0A1009}>)
+3: ((LAMBDA (CONDITION)) #<USOCKET:CONNECTION-REFUSED-ERROR {B0A1009}>)
+4: (SIGNAL #<USOCKET:CONNECTION-REFUSED-ERROR {B0A1009}>)
+5: (ERROR USOCKET:CONNECTION-REFUSED-ERROR)
+6: (USOCKET::HANDLE-CONDITION
+    #<SB-BSD-SOCKETS:CONNECTION-REFUSED-ERROR {B0A0DA9}>
+    #<USOCKET:STREAM-USOCKET {B09A869}>)
+7: (USOCKET:SOCKET-CONNECT \"localhost\" 4444)
+8: (DRAKMA:HTTP-REQUEST
+    #<PURI:URI http://localhost:4444/selenium-server/driver?cmd=getNewBrowserSession&1=*firefox&2=http%3A%2F%2Flocalhost%3A7777>)
+9: (SELENIUM::EXECUTE
+    #<PURI:URI http://localhost:4444/selenium-server/driver?cmd=getNewBrowserSession&1=*firefox&2=http%3A%2F%2Flocalhost%3A7777>)
+10: ((SB-PCL::FAST-METHOD LIFT::LIFT-TEST
+      (OVOROST-TEST::OVOROST-WEB-TEST (EQL 'OVOROST-TEST::INDEX-PAGE)))
+     #<unavailable argument>
+     #<unavailable argument>
+     #<unavailable argument>
+     #<unavailable argument>)
+11: ((SB-PCL::FAST-METHOD LIFT::RUN-TEST-INTERNAL (LIFT:TEST-MIXIN SYMBOL T))
+     #<unavailable argument>
+     #<unavailable argument>
+     #<OVOROST-TEST::OVOROST-WEB-TEST OVOROST-WEB-TEST {B57BC41}>
+     OVOROST-TEST::INDEX-PAGE
+     #<Results for /home/nicolas/src/ovorost/etc/lift-standard.config 1 Test, 1 Error>)
+12: ((SB-PCL::FAST-METHOD LIFT::TESTSUITE-RUN
+      (LIFT:TEST-MIXIN LIFT::TEST-RESULT))
+     #<unavailable argument>
+     #<unavailable argument>
+     #<OVOROST-TEST::OVOROST-WEB-TEST OVOROST-WEB-TEST {B57BC41}>
+     #<Results for /home/nicolas/src/ovorost/etc/lift-standard.config 1 Test, 1 Error>)
+13: ((SB-PCL::FAST-METHOD LIFT::DO-TESTING (LIFT:TEST-MIXIN T T))
+     #<unavailable argument>
+     #<unavailable argument>
+     #<unavailable argument>
+     #<Results for /home/nicolas/src/ovorost/etc/lift-standard.config 1 Test, 1 Error>
+     #<CLOSURE (LAMBDA #) {B57EBE5}>)
+14: ((SB-PCL::FAST-METHOD LIFT::DO-TESTING-IN-ENVIRONMENT
+      (LIFT:TEST-MIXIN T T))
+     #<unavailable argument>
+     #<unavailable argument>
+     #<OVOROST-TEST::OVOROST-WEB-TEST OVOROST-WEB-TEST {B57BC41}>
+     #<Results for /home/nicolas/src/ovorost/etc/lift-standard.config 1 Test, 1 Error>
+     #<CLOSURE (LAMBDA #) {B57EBE5}>)
+15: ((SB-PCL::FAST-METHOD LIFT::DO-TESTING-IN-ENVIRONMENT :AROUND
+      (LIFT:TEST-MIXIN T T))
+     #<unavailable argument>
+     #S(SB-PCL::FAST-METHOD-CALL
+        :FUNCTION #<FUNCTION #>
+        :PV-CELL NIL
+        :NEXT-METHOD-CALL NIL
+        :ARG-INFO (3))
+     #<OVOROST-TEST::OVOROST-WEB-TEST OVOROST-WEB-TEST {B57BC41}>
+     #<Results for /home/nicolas/src/ovorost/etc/lift-standard.config 1 Test, 1 Error>
+     #<CLOSURE (LAMBDA #) {B57EBE5}>)
+16: ((SB-PCL::FAST-METHOD LIFT::RUN-TESTS-INTERNAL (LIFT:TEST-MIXIN))
+     #<unavailable argument>
+     #<unavailable argument>
+     #<OVOROST-TEST::OVOROST-WEB-TEST OVOROST-WEB-TEST {B57BC41}>)
+17: ((SB-PCL::FAST-METHOD LIFT::RUN-TESTS-INTERNAL (SYMBOL))
+     #<unavailable argument>
+     #<unavailable argument>
+     OVOROST-TEST::OVOROST-WEB-TEST)
+18: ((SB-PCL::FAST-METHOD LIFT::TESTSUITE-RUN
+      (LIFT:TEST-MIXIN LIFT::TEST-RESULT))
+     #<unavailable argument>
+     #<unavailable argument>
+     #<OVOROST-TEST::OVOROST-TEST OVOROST-TEST {B3F3629}>
+     #<Results for /home/nicolas/src/ovorost/etc/lift-standard.config 1 Test, 1 Error>)
+19: ((SB-PCL::FAST-METHOD LIFT::DO-TESTING (LIFT:TEST-MIXIN T T))
+     #<unavailable argument>
+     #<unavailable argument>
+     #<unavailable argument>
+     #<Results for /home/nicolas/src/ovorost/etc/lift-standard.config 1 Test, 1 Error>
+     #<CLOSURE (LAMBDA #) {B3F7AE5}>)
+20: ((SB-PCL::FAST-METHOD LIFT::DO-TESTING-IN-ENVIRONMENT
+      (LIFT:TEST-MIXIN T T))
+     #<unavailable argument>
+     #<unavailable argument>
+     #<OVOROST-TEST::OVOROST-TEST OVOROST-TEST {B3F3629}>
+     #<Results for /home/nicolas/src/ovorost/etc/lift-standard.config 1 Test, 1 Error>
+     #<CLOSURE (LAMBDA #) {B3F7AE5}>)
+21: ((SB-PCL::FAST-METHOD LIFT::DO-TESTING-IN-ENVIRONMENT :AROUND
+      (LIFT:TEST-MIXIN T T))
+     #<unavailable argument>
+     #S(SB-PCL::FAST-METHOD-CALL
+        :FUNCTION #<FUNCTION #>
+        :PV-CELL NIL
+        :NEXT-METHOD-CALL NIL
+        :ARG-INFO (3))
+     #<OVOROST-TEST::OVOROST-TEST OVOROST-TEST {B3F3629}>
+     #<Results for /home/nicolas/src/ovorost/etc/lift-standard.config 1 Test, 1 Error>
+     #<CLOSURE (LAMBDA #) {B3F7AE5}>)
+22: ((SB-PCL::FAST-METHOD LIFT::RUN-TESTS-INTERNAL (LIFT:TEST-MIXIN))
+     #<unavailable argument>
+     #<unavailable argument>
+     #<OVOROST-TEST::OVOROST-TEST OVOROST-TEST {B3F3629}>)
+23: ((SB-PCL::FAST-METHOD LIFT::RUN-TESTS-INTERNAL (SYMBOL))
+     #<unavailable argument>
+     #<unavailable argument>
+     OVOROST-TEST)
+24: (LIFT:RUN-TESTS)
+25: (LIFT::%RUN-TESTS-FROM-FILE
+     \"/home/nicolas/src/ovorost/etc/lift-standard.config\")
+26: (LIFT::RUN-TESTS-FROM-FILE #<unavailable argument>)
+27: (LIFT:RUN-TESTS)
+28: (SB-INT:SIMPLE-EVAL-IN-LEXENV
+     (OVOROST-TEST:RUN-OVOROST-TEST)
+     #<NULL-LEXENV>)
+29: (SWANK::EVAL-REGION
+     \"(ovorost-test:run-ovorost-test)
+\")
+30: ((LAMBDA ()))
+31: (SWANK::TRACK-PACKAGE #<CLOSURE (LAMBDA #) {AE171B5}>)
+32: ((LAMBDA (SWANK-BACKEND::FN)) #<CLOSURE (LAMBDA #) {AE1719D}>)
+33: (SWANK::CALL-WITH-BUFFER-SYNTAX #<CLOSURE (LAMBDA #) {AE1719D}>)
+34: (SWANK::REPL-EVAL
+     \"(ovorost-test:run-ovorost-test)
+\")
+35: (SB-INT:SIMPLE-EVAL-IN-LEXENV
+     (SWANK:LISTENER-EVAL \"(ovorost-test:run-ovorost-test)
+\")
+     #<NULL-LEXENV>)
+36: ((LAMBDA ()))
+37: ((LAMBDA (SWANK-BACKEND::HOOK SWANK-BACKEND::FUN))
+     #<FUNCTION SWANK:SWANK-DEBUGGER-HOOK>
+     #<CLOSURE (LAMBDA #) {AE16BE5}>)
+38: ((LAMBDA ()))
+39: ((LAMBDA (SWANK-BACKEND::HOOK SWANK-BACKEND::FUN))
+     #<FUNCTION SWANK:SWANK-DEBUGGER-HOOK>
+     #<FUNCTION (LAMBDA #) {AB0BE4D}>)
+40: (SWANK::CALL-WITH-REDIRECTED-IO
+     #<SWANK::CONNECTION {ADB1271}>
+     #<CLOSURE (LAMBDA #) {AE15915}>)
+41: (SWANK::CALL-WITH-CONNECTION
+     #<SWANK::CONNECTION {ADB1271}>
+     #<FUNCTION (LAMBDA #) {AB0BE4D}>)
+42: (SWANK::HANDLE-REQUEST #<SWANK::CONNECTION {ADB1271}>)
+43: (SWANK::PROCESS-AVAILABLE-INPUT
+     #<SB-SYS:FD-STREAM for \"a constant string\" {ADB0109}>
+     #<CLOSURE (LAMBDA #) {AE158AD}>)
+44: ((FLET SWANK::HANDLER))
+45: ((LAMBDA (SWANK-BACKEND::_)) #<unused argument>)
+46: (SB-IMPL::SUB-SERVE-EVENT NIL NIL NIL)
+47: (SB-SYS:WAIT-UNTIL-FD-USABLE 0 :INPUT NIL)
+48: (SB-IMPL::REFILL-BUFFER/FD
+     #<SB-SYS:FD-STREAM for \"standard input\" {A803A69}>)
+49: (SB-IMPL::INPUT-CHAR/LATIN-9
+     #<SB-SYS:FD-STREAM for \"standard input\" {A803A69}>
+     NIL
+     #:EOF-OBJECT)
+50: (READ-CHAR
+     #<SB-SYS:FD-STREAM for \"standard input\" {A803A69}>
+     NIL
+     #:EOF-OBJECT
+     #<unused argument>)
+51: (READ-CHAR
+     #<SYNONYM-STREAM :SYMBOL SB-SYS:*STDIN* {9116E01}>
+     NIL
+     #:EOF-OBJECT
+     #<unused argument>)
+52: (READ-PRESERVING-WHITESPACE
+     #<SYNONYM-STREAM :SYMBOL SB-SYS:*STDIN* {9116E01}>
+     NIL
+     (NIL)
+     T)
+53: (READ-PRESERVING-WHITESPACE
+     #<SYNONYM-STREAM :SYMBOL SB-SYS:*STDIN* {9116E01}>
+     NIL
+     (NIL)
+     NIL)
+54: (READ #<SYNONYM-STREAM :SYMBOL SB-SYS:*STDIN* {9116E01}> NIL (NIL) NIL)
+55: (SB-IMPL::REPL-READ-FORM-FUN
+     #<SYNONYM-STREAM :SYMBOL SB-SYS:*STDIN* {9116E01}>
+     #<unavailable argument>)
+56: (SB-IMPL::REPL-FUN NIL)
+57: (SB-IMPL::REPL-FUN NIL)
+58: ((LAMBDA ()))
+59: ((LAMBDA ()))
+60: (SB-IMPL::%WITH-REBOUND-IO-SYNTAX #<CLOSURE (LAMBDA #) {AF8D6BD}>)
+61: (SB-IMPL::TOPLEVEL-REPL NIL)
+62: (SB-IMPL::TOPLEVEL-INIT)
+63: ((LABELS SB-IMPL::RESTART-LISP))
+"))
+(
+(:suite OVOROST-WEB-TEST)
+(:name NEWS-PAGE)
+(:START-TIME-UNIVERSAL 3413906380)
+(:END-TIME-UNIVERSAL 3413906380)
+(:PROBLEM-KIND "Error")
+(:PROBLEM-STEP :TESTING)
+(:PROBLEM-CONDITION "#<USOCKET:CONNECTION-REFUSED-ERROR {B2F3101}>")
+(:PROBLEM-CONDITION-DESCRIPTION "Condition USOCKET:CONNECTION-REFUSED-ERROR was signalled.")
+(:PROBLEM-BACKTRACE "0: (BACKTRACE 536870911 #<SB-IMPL::STRING-OUTPUT-STREAM {B2F3441}>)
+1: (LIFT::GET-BACKTRACE #<unavailable argument>)
+2: ((LAMBDA (CONDITION)) #<USOCKET:CONNECTION-REFUSED-ERROR {B2F3101}>)
+3: ((LAMBDA (CONDITION)) #<USOCKET:CONNECTION-REFUSED-ERROR {B2F3101}>)
+4: (SIGNAL #<USOCKET:CONNECTION-REFUSED-ERROR {B2F3101}>)
+5: (ERROR USOCKET:CONNECTION-REFUSED-ERROR)
+6: (USOCKET::HANDLE-CONDITION
+    #<SB-BSD-SOCKETS:CONNECTION-REFUSED-ERROR {B2F2E91}>
+    #<USOCKET:STREAM-USOCKET {B2ECD71}>)
+7: (USOCKET:SOCKET-CONNECT \"localhost\" 4444)
+8: (DRAKMA:HTTP-REQUEST
+    #<PURI:URI http://localhost:4444/selenium-server/driver?cmd=getNewBrowserSession&1=*firefox&2=http%3A%2F%2Flocalhost%3A7777>)
+9: (SELENIUM::EXECUTE
+    #<PURI:URI http://localhost:4444/selenium-server/driver?cmd=getNewBrowserSession&1=*firefox&2=http%3A%2F%2Flocalhost%3A7777>)
+10: ((SB-PCL::FAST-METHOD LIFT::LIFT-TEST
+      (OVOROST-TEST::OVOROST-WEB-TEST (EQL 'OVOROST-TEST::NEWS-PAGE)))
+     #<unavailable argument>
+     #<unavailable argument>
+     #<unavailable argument>
+     #<unavailable argument>)
+11: ((SB-PCL::FAST-METHOD LIFT::RUN-TEST-INTERNAL (LIFT:TEST-MIXIN SYMBOL T))
+     #<unavailable argument>
+     #<unavailable argument>
+     #<OVOROST-TEST::OVOROST-WEB-TEST OVOROST-WEB-TEST {B57BC41}>
+     OVOROST-TEST::NEWS-PAGE
+     #<Results for /home/nicolas/src/ovorost/etc/lift-standard.config 2 Tests, 2 Errors>)
+12: ((SB-PCL::FAST-METHOD LIFT::TESTSUITE-RUN
+      (LIFT:TEST-MIXIN LIFT::TEST-RESULT))
+     #<unavailable argument>
+     #<unavailable argument>
+     #<OVOROST-TEST::OVOROST-WEB-TEST OVOROST-WEB-TEST {B57BC41}>
+     #<Results for /home/nicolas/src/ovorost/etc/lift-standard.config 2 Tests, 2 Errors>)
+13: ((SB-PCL::FAST-METHOD LIFT::DO-TESTING (LIFT:TEST-MIXIN T T))
+     #<unavailable argument>
+     #<unavailable argument>
+     #<unavailable argument>
+     #<Results for /home/nicolas/src/ovorost/etc/lift-standard.config 2 Tests, 2 Errors>
+     #<CLOSURE (LAMBDA #) {B57EBE5}>)
+14: ((SB-PCL::FAST-METHOD LIFT::DO-TESTING-IN-ENVIRONMENT
+      (LIFT:TEST-MIXIN T T))
+     #<unavailable argument>
+     #<unavailable argument>
+     #<OVOROST-TEST::OVOROST-WEB-TEST OVOROST-WEB-TEST {B57BC41}>
+     #<Results for /home/nicolas/src/ovorost/etc/lift-standard.config 2 Tests, 2 Errors>
+     #<CLOSURE (LAMBDA #) {B57EBE5}>)
+15: ((SB-PCL::FAST-METHOD LIFT::DO-TESTING-IN-ENVIRONMENT :AROUND
+      (LIFT:TEST-MIXIN T T))
+     #<unavailable argument>
+     #S(SB-PCL::FAST-METHOD-CALL
+        :FUNCTION #<FUNCTION #>
+        :PV-CELL NIL
+        :NEXT-METHOD-CALL NIL
+        :ARG-INFO (3))
+     #<OVOROST-TEST::OVOROST-WEB-TEST OVOROST-WEB-TEST {B57BC41}>
+     #<Results for /home/nicolas/src/ovorost/etc/lift-standard.config 2 Tests, 2 Errors>
+     #<CLOSURE (LAMBDA #) {B57EBE5}>)
+16: ((SB-PCL::FAST-METHOD LIFT::RUN-TESTS-INTERNAL (LIFT:TEST-MIXIN))
+     #<unavailable argument>
+     #<unavailable argument>
+     #<OVOROST-TEST::OVOROST-WEB-TEST OVOROST-WEB-TEST {B57BC41}>)
+17: ((SB-PCL::FAST-METHOD LIFT::RUN-TESTS-INTERNAL (SYMBOL))
+     #<unavailable argument>
+     #<unavailable argument>
+     OVOROST-TEST::OVOROST-WEB-TEST)
+18: ((SB-PCL::FAST-METHOD LIFT::TESTSUITE-RUN
+      (LIFT:TEST-MIXIN LIFT::TEST-RESULT))
+     #<unavailable argument>
+     #<unavailable argument>
+     #<OVOROST-TEST::OVOROST-TEST OVOROST-TEST {B3F3629}>
+     #<Results for /home/nicolas/src/ovorost/etc/lift-standard.config 2 Tests, 2 Errors>)
+19: ((SB-PCL::FAST-METHOD LIFT::DO-TESTING (LIFT:TEST-MIXIN T T))
+     #<unavailable argument>
+     #<unavailable argument>
+     #<unavailable argument>
+     #<Results for /home/nicolas/src/ovorost/etc/lift-standard.config 2 Tests, 2 Errors>
+     #<CLOSURE (LAMBDA #) {B3F7AE5}>)
+20: ((SB-PCL::FAST-METHOD LIFT::DO-TESTING-IN-ENVIRONMENT
+      (LIFT:TEST-MIXIN T T))
+     #<unavailable argument>
+     #<unavailable argument>
+     #<OVOROST-TEST::OVOROST-TEST OVOROST-TEST {B3F3629}>
+     #<Results for /home/nicolas/src/ovorost/etc/lift-standard.config 2 Tests, 2 Errors>
+     #<CLOSURE (LAMBDA #) {B3F7AE5}>)
+21: ((SB-PCL::FAST-METHOD LIFT::DO-TESTING-IN-ENVIRONMENT :AROUND
+      (LIFT:TEST-MIXIN T T))
+     #<unavailable argument>
+     #S(SB-PCL::FAST-METHOD-CALL
+        :FUNCTION #<FUNCTION #>
+        :PV-CELL NIL
+        :NEXT-METHOD-CALL NIL
+        :ARG-INFO (3))
+     #<OVOROST-TEST::OVOROST-TEST OVOROST-TEST {B3F3629}>
+     #<Results for /home/nicolas/src/ovorost/etc/lift-standard.config 2 Tests, 2 Errors>
+     #<CLOSURE (LAMBDA #) {B3F7AE5}>)
+22: ((SB-PCL::FAST-METHOD LIFT::RUN-TESTS-INTERNAL (LIFT:TEST-MIXIN))
+     #<unavailable argument>
+     #<unavailable argument>
+     #<OVOROST-TEST::OVOROST-TEST OVOROST-TEST {B3F3629}>)
+23: ((SB-PCL::FAST-METHOD LIFT::RUN-TESTS-INTERNAL (SYMBOL))
+     #<unavailable argument>
+     #<unavailable argument>
+     OVOROST-TEST)
+24: (LIFT:RUN-TESTS)
+25: (LIFT::%RUN-TESTS-FROM-FILE
+     \"/home/nicolas/src/ovorost/etc/lift-standard.config\")
+26: (LIFT::RUN-TESTS-FROM-FILE #<unavailable argument>)
+27: (LIFT:RUN-TESTS)
+28: (SB-INT:SIMPLE-EVAL-IN-LEXENV
+     (OVOROST-TEST:RUN-OVOROST-TEST)
+     #<NULL-LEXENV>)
+29: (SWANK::EVAL-REGION
+     \"(ovorost-test:run-ovorost-test)
+\")
+30: ((LAMBDA ()))
+31: (SWANK::TRACK-PACKAGE #<CLOSURE (LAMBDA #) {AE171B5}>)
+32: ((LAMBDA (SWANK-BACKEND::FN)) #<CLOSURE (LAMBDA #) {AE1719D}>)
+33: (SWANK::CALL-WITH-BUFFER-SYNTAX #<CLOSURE (LAMBDA #) {AE1719D}>)
+34: (SWANK::REPL-EVAL
+     \"(ovorost-test:run-ovorost-test)
+\")
+35: (SB-INT:SIMPLE-EVAL-IN-LEXENV
+     (SWANK:LISTENER-EVAL \"(ovorost-test:run-ovorost-test)
+\")
+     #<NULL-LEXENV>)
+36: ((LAMBDA ()))
+37: ((LAMBDA (SWANK-BACKEND::HOOK SWANK-BACKEND::FUN))
+     #<FUNCTION SWANK:SWANK-DEBUGGER-HOOK>
+     #<CLOSURE (LAMBDA #) {AE16BE5}>)
+38: ((LAMBDA ()))
+39: ((LAMBDA (SWANK-BACKEND::HOOK SWANK-BACKEND::FUN))
+     #<FUNCTION SWANK:SWANK-DEBUGGER-HOOK>
+     #<FUNCTION (LAMBDA #) {AB0BE4D}>)
+40: (SWANK::CALL-WITH-REDIRECTED-IO
+     #<SWANK::CONNECTION {ADB1271}>
+     #<CLOSURE (LAMBDA #) {AE15915}>)
+41: (SWANK::CALL-WITH-CONNECTION
+     #<SWANK::CONNECTION {ADB1271}>
+     #<FUNCTION (LAMBDA #) {AB0BE4D}>)
+42: (SWANK::HANDLE-REQUEST #<SWANK::CONNECTION {ADB1271}>)
+43: (SWANK::PROCESS-AVAILABLE-INPUT
+     #<SB-SYS:FD-STREAM for \"a constant string\" {ADB0109}>
+     #<CLOSURE (LAMBDA #) {AE158AD}>)
+44: ((FLET SWANK::HANDLER))
+45: ((LAMBDA (SWANK-BACKEND::_)) #<unused argument>)
+46: (SB-IMPL::SUB-SERVE-EVENT NIL NIL NIL)
+47: (SB-SYS:WAIT-UNTIL-FD-USABLE 0 :INPUT NIL)
+48: (SB-IMPL::REFILL-BUFFER/FD
+     #<SB-SYS:FD-STREAM for \"standard input\" {A803A69}>)
+49: (SB-IMPL::INPUT-CHAR/LATIN-9
+     #<SB-SYS:FD-STREAM for \"standard input\" {A803A69}>
+     NIL
+     #:EOF-OBJECT)
+50: (READ-CHAR
+     #<SB-SYS:FD-STREAM for \"standard input\" {A803A69}>
+     NIL
+     #:EOF-OBJECT
+     #<unused argument>)
+51: (READ-CHAR
+     #<SYNONYM-STREAM :SYMBOL SB-SYS:*STDIN* {9116E01}>
+     NIL
+     #:EOF-OBJECT
+     #<unused argument>)
+52: (READ-PRESERVING-WHITESPACE
+     #<SYNONYM-STREAM :SYMBOL SB-SYS:*STDIN* {9116E01}>
+     NIL
+     (NIL)
+     T)
+53: (READ-PRESERVING-WHITESPACE
+     #<SYNONYM-STREAM :SYMBOL SB-SYS:*STDIN* {9116E01}>
+     NIL
+     (NIL)
+     NIL)
+54: (READ #<SYNONYM-STREAM :SYMBOL SB-SYS:*STDIN* {9116E01}> NIL (NIL) NIL)
+55: (SB-IMPL::REPL-READ-FORM-FUN
+     #<SYNONYM-STREAM :SYMBOL SB-SYS:*STDIN* {9116E01}>
+     #<unavailable argument>)
+56: (SB-IMPL::REPL-FUN NIL)
+57: (SB-IMPL::REPL-FUN NIL)
+58: ((LAMBDA ()))
+59: ((LAMBDA ()))
+60: (SB-IMPL::%WITH-REBOUND-IO-SYNTAX #<CLOSURE (LAMBDA #) {AF8D6BD}>)
+61: (SB-IMPL::TOPLEVEL-REPL NIL)
+62: (SB-IMPL::TOPLEVEL-INIT)
+63: ((LABELS SB-IMPL::RESTART-LISP))
+"))
+(
+(:suite OVOROST-WEB-TEST)
+(:name LOGIN-PAGE)
+(:START-TIME-UNIVERSAL 3413906380)
+(:END-TIME-UNIVERSAL 3413906380)
+(:PROBLEM-KIND "Error")
+(:PROBLEM-STEP :TESTING)
+(:PROBLEM-CONDITION "#<USOCKET:CONNECTION-REFUSED-ERROR {B40B669}>")
+(:PROBLEM-CONDITION-DESCRIPTION "Condition USOCKET:CONNECTION-REFUSED-ERROR was signalled.")
+(:PROBLEM-BACKTRACE "0: (BACKTRACE 536870911 #<SB-IMPL::STRING-OUTPUT-STREAM {B40B9A9}>)
+1: (LIFT::GET-BACKTRACE #<unavailable argument>)
+2: ((LAMBDA (CONDITION)) #<USOCKET:CONNECTION-REFUSED-ERROR {B40B669}>)
+3: ((LAMBDA (CONDITION)) #<USOCKET:CONNECTION-REFUSED-ERROR {B40B669}>)
+4: (SIGNAL #<USOCKET:CONNECTION-REFUSED-ERROR {B40B669}>)
+5: (ERROR USOCKET:CONNECTION-REFUSED-ERROR)
+6: (USOCKET::HANDLE-CONDITION
+    #<SB-BSD-SOCKETS:CONNECTION-REFUSED-ERROR {B40B409}>
+    #<USOCKET:STREAM-USOCKET {B405411}>)
+7: (USOCKET:SOCKET-CONNECT \"localhost\" 4444)
+8: (DRAKMA:HTTP-REQUEST
+    #<PURI:URI http://localhost:4444/selenium-server/driver?cmd=getNewBrowserSession&1=*firefox&2=http%3A%2F%2Flocalhost%3A7777>)
+9: (SELENIUM::EXECUTE
+    #<PURI:URI http://localhost:4444/selenium-server/driver?cmd=getNewBrowserSession&1=*firefox&2=http%3A%2F%2Flocalhost%3A7777>)
+10: ((SB-PCL::FAST-METHOD LIFT::LIFT-TEST
+      (OVOROST-TEST::OVOROST-WEB-TEST (EQL 'OVOROST-TEST::LOGIN-PAGE)))
+     #<unavailable argument>
+     #<unavailable argument>
+     #<unavailable argument>
+     #<unavailable argument>)
+11: ((SB-PCL::FAST-METHOD LIFT::RUN-TEST-INTERNAL (LIFT:TEST-MIXIN SYMBOL T))
+     #<unavailable argument>
+     #<unavailable argument>
+     #<OVOROST-TEST::OVOROST-WEB-TEST OVOROST-WEB-TEST {B57BC41}>
+     OVOROST-TEST::LOGIN-PAGE
+     #<Results for /home/nicolas/src/ovorost/etc/lift-standard.config 3 Tests, 3 Errors>)
+12: ((SB-PCL::FAST-METHOD LIFT::TESTSUITE-RUN
+      (LIFT:TEST-MIXIN LIFT::TEST-RESULT))
+     #<unavailable argument>
+     #<unavailable argument>
+     #<OVOROST-TEST::OVOROST-WEB-TEST OVOROST-WEB-TEST {B57BC41}>
+     #<Results for /home/nicolas/src/ovorost/etc/lift-standard.config 3 Tests, 3 Errors>)
+13: ((SB-PCL::FAST-METHOD LIFT::DO-TESTING (LIFT:TEST-MIXIN T T))
+     #<unavailable argument>
+     #<unavailable argument>
+     #<unavailable argument>
+     #<Results for /home/nicolas/src/ovorost/etc/lift-standard.config 3 Tests, 3 Errors>
+     #<CLOSURE (LAMBDA #) {B57EBE5}>)
+14: ((SB-PCL::FAST-METHOD LIFT::DO-TESTING-IN-ENVIRONMENT
+      (LIFT:TEST-MIXIN T T))
+     #<unavailable argument>
+     #<unavailable argument>
+     #<OVOROST-TEST::OVOROST-WEB-TEST OVOROST-WEB-TEST {B57BC41}>
+     #<Results for /home/nicolas/src/ovorost/etc/lift-standard.config 3 Tests, 3 Errors>
+     #<CLOSURE (LAMBDA #) {B57EBE5}>)
+15: ((SB-PCL::FAST-METHOD LIFT::DO-TESTING-IN-ENVIRONMENT :AROUND
+      (LIFT:TEST-MIXIN T T))
+     #<unavailable argument>
+     #S(SB-PCL::FAST-METHOD-CALL
+        :FUNCTION #<FUNCTION #>
+        :PV-CELL NIL
+        :NEXT-METHOD-CALL NIL
+        :ARG-INFO (3))
+     #<OVOROST-TEST::OVOROST-WEB-TEST OVOROST-WEB-TEST {B57BC41}>
+     #<Results for /home/nicolas/src/ovorost/etc/lift-standard.config 3 Tests, 3 Errors>
+     #<CLOSURE (LAMBDA #) {B57EBE5}>)
+16: ((SB-PCL::FAST-METHOD LIFT::RUN-TESTS-INTERNAL (LIFT:TEST-MIXIN))
+     #<unavailable argument>
+     #<unavailable argument>
+     #<OVOROST-TEST::OVOROST-WEB-TEST OVOROST-WEB-TEST {B57BC41}>)
+17: ((SB-PCL::FAST-METHOD LIFT::RUN-TESTS-INTERNAL (SYMBOL))
+     #<unavailable argument>
+     #<unavailable argument>
+     OVOROST-TEST::OVOROST-WEB-TEST)
+18: ((SB-PCL::FAST-METHOD LIFT::TESTSUITE-RUN
+      (LIFT:TEST-MIXIN LIFT::TEST-RESULT))
+     #<unavailable argument>
+     #<unavailable argument>
+     #<OVOROST-TEST::OVOROST-TEST OVOROST-TEST {B3F3629}>
+     #<Results for /home/nicolas/src/ovorost/etc/lift-standard.config 3 Tests, 3 Errors>)
+19: ((SB-PCL::FAST-METHOD LIFT::DO-TESTING (LIFT:TEST-MIXIN T T))
+     #<unavailable argument>
+     #<unavailable argument>
+     #<unavailable argument>
+     #<Results for /home/nicolas/src/ovorost/etc/lift-standard.config 3 Tests, 3 Errors>
+     #<CLOSURE (LAMBDA #) {B3F7AE5}>)
+20: ((SB-PCL::FAST-METHOD LIFT::DO-TESTING-IN-ENVIRONMENT
+      (LIFT:TEST-MIXIN T T))
+     #<unavailable argument>
+     #<unavailable argument>
+     #<OVOROST-TEST::OVOROST-TEST OVOROST-TEST {B3F3629}>
+     #<Results for /home/nicolas/src/ovorost/etc/lift-standard.config 3 Tests, 3 Errors>
+     #<CLOSURE (LAMBDA #) {B3F7AE5}>)
+21: ((SB-PCL::FAST-METHOD LIFT::DO-TESTING-IN-ENVIRONMENT :AROUND
+      (LIFT:TEST-MIXIN T T))
+     #<unavailable argument>
+     #S(SB-PCL::FAST-METHOD-CALL
+        :FUNCTION #<FUNCTION #>
+        :PV-CELL NIL
+        :NEXT-METHOD-CALL NIL
+        :ARG-INFO (3))
+     #<OVOROST-TEST::OVOROST-TEST OVOROST-TEST {B3F3629}>
+     #<Results for /home/nicolas/src/ovorost/etc/lift-standard.config 3 Tests, 3 Errors>
+     #<CLOSURE (LAMBDA #) {B3F7AE5}>)
+22: ((SB-PCL::FAST-METHOD LIFT::RUN-TESTS-INTERNAL (LIFT:TEST-MIXIN))
+     #<unavailable argument>
+     #<unavailable argument>
+     #<OVOROST-TEST::OVOROST-TEST OVOROST-TEST {B3F3629}>)
+23: ((SB-PCL::FAST-METHOD LIFT::RUN-TESTS-INTERNAL (SYMBOL))
+     #<unavailable argument>
+     #<unavailable argument>
+     OVOROST-TEST)
+24: (LIFT:RUN-TESTS)
+25: (LIFT::%RUN-TESTS-FROM-FILE
+     \"/home/nicolas/src/ovorost/etc/lift-standard.config\")
+26: (LIFT::RUN-TESTS-FROM-FILE #<unavailable argument>)
+27: (LIFT:RUN-TESTS)
+28: (SB-INT:SIMPLE-EVAL-IN-LEXENV
+     (OVOROST-TEST:RUN-OVOROST-TEST)
+     #<NULL-LEXENV>)
+29: (SWANK::EVAL-REGION
+     \"(ovorost-test:run-ovorost-test)
+\")
+30: ((LAMBDA ()))
+31: (SWANK::TRACK-PACKAGE #<CLOSURE (LAMBDA #) {AE171B5}>)
+32: ((LAMBDA (SWANK-BACKEND::FN)) #<CLOSURE (LAMBDA #) {AE1719D}>)
+33: (SWANK::CALL-WITH-BUFFER-SYNTAX #<CLOSURE (LAMBDA #) {AE1719D}>)
+34: (SWANK::REPL-EVAL
+     \"(ovorost-test:run-ovorost-test)
+\")
+35: (SB-INT:SIMPLE-EVAL-IN-LEXENV
+     (SWANK:LISTENER-EVAL \"(ovorost-test:run-ovorost-test)
+\")
+     #<NULL-LEXENV>)
+36: ((LAMBDA ()))
+37: ((LAMBDA (SWANK-BACKEND::HOOK SWANK-BACKEND::FUN))
+     #<FUNCTION SWANK:SWANK-DEBUGGER-HOOK>
+     #<CLOSURE (LAMBDA #) {AE16BE5}>)
+38: ((LAMBDA ()))
+39: ((LAMBDA (SWANK-BACKEND::HOOK SWANK-BACKEND::FUN))
+     #<FUNCTION SWANK:SWANK-DEBUGGER-HOOK>
+     #<FUNCTION (LAMBDA #) {AB0BE4D}>)
+40: (SWANK::CALL-WITH-REDIRECTED-IO
+     #<SWANK::CONNECTION {ADB1271}>
+     #<CLOSURE (LAMBDA #) {AE15915}>)
+41: (SWANK::CALL-WITH-CONNECTION
+     #<SWANK::CONNECTION {ADB1271}>
+     #<FUNCTION (LAMBDA #) {AB0BE4D}>)
+42: (SWANK::HANDLE-REQUEST #<SWANK::CONNECTION {ADB1271}>)
+43: (SWANK::PROCESS-AVAILABLE-INPUT
+     #<SB-SYS:FD-STREAM for \"a constant string\" {ADB0109}>
+     #<CLOSURE (LAMBDA #) {AE158AD}>)
+44: ((FLET SWANK::HANDLER))
+45: ((LAMBDA (SWANK-BACKEND::_)) #<unused argument>)
+46: (SB-IMPL::SUB-SERVE-EVENT NIL NIL NIL)
+47: (SB-SYS:WAIT-UNTIL-FD-USABLE 0 :INPUT NIL)
+48: (SB-IMPL::REFILL-BUFFER/FD
+     #<SB-SYS:FD-STREAM for \"standard input\" {A803A69}>)
+49: (SB-IMPL::INPUT-CHAR/LATIN-9
+     #<SB-SYS:FD-STREAM for \"standard input\" {A803A69}>
+     NIL
+     #:EOF-OBJECT)
+50: (READ-CHAR
+     #<SB-SYS:FD-STREAM for \"standard input\" {A803A69}>
+     NIL
+     #:EOF-OBJECT
+     #<unused argument>)
+51: (READ-CHAR
+     #<SYNONYM-STREAM :SYMBOL SB-SYS:*STDIN* {9116E01}>
+     NIL
+     #:EOF-OBJECT
+     #<unused argument>)
+52: (READ-PRESERVING-WHITESPACE
+     #<SYNONYM-STREAM :SYMBOL SB-SYS:*STDIN* {9116E01}>
+     NIL
+     (NIL)
+     T)
+53: (READ-PRESERVING-WHITESPACE
+     #<SYNONYM-STREAM :SYMBOL SB-SYS:*STDIN* {9116E01}>
+     NIL
+     (NIL)
+     NIL)
+54: (READ #<SYNONYM-STREAM :SYMBOL SB-SYS:*STDIN* {9116E01}> NIL (NIL) NIL)
+55: (SB-IMPL::REPL-READ-FORM-FUN
+     #<SYNONYM-STREAM :SYMBOL SB-SYS:*STDIN* {9116E01}>
+     #<unavailable argument>)
+56: (SB-IMPL::REPL-FUN NIL)
+57: (SB-IMPL::REPL-FUN NIL)
+58: ((LAMBDA ()))
+59: ((LAMBDA ()))
+60: (SB-IMPL::%WITH-REBOUND-IO-SYNTAX #<CLOSURE (LAMBDA #) {AF8D6BD}>)
+61: (SB-IMPL::TOPLEVEL-REPL NIL)
+62: (SB-IMPL::TOPLEVEL-INIT)
+63: ((LABELS SB-IMPL::RESTART-LISP))
+"))
+(
+(:suite OVOROST-WEB-TEST)
+(:name LOGOUT-PAGE)
+(:START-TIME-UNIVERSAL 3413906380)
+(:END-TIME-UNIVERSAL 3413906380)
+(:PROBLEM-KIND "Error")
+(:PROBLEM-STEP :TESTING)
+(:PROBLEM-CONDITION "#<USOCKET:CONNECTION-REFUSED-ERROR {B50BED1}>")
+(:PROBLEM-CONDITION-DESCRIPTION "Condition USOCKET:CONNECTION-REFUSED-ERROR was signalled.")
+(:PROBLEM-BACKTRACE "0: (BACKTRACE 536870911 #<SB-IMPL::STRING-OUTPUT-STREAM {B50C221}>)
+1: (LIFT::GET-BACKTRACE #<unavailable argument>)
+2: ((LAMBDA (CONDITION)) #<USOCKET:CONNECTION-REFUSED-ERROR {B50BED1}>)
+3: ((LAMBDA (CONDITION)) #<USOCKET:CONNECTION-REFUSED-ERROR {B50BED1}>)
+4: (SIGNAL #<USOCKET:CONNECTION-REFUSED-ERROR {B50BED1}>)
+5: (ERROR USOCKET:CONNECTION-REFUSED-ERROR)
+6: (USOCKET::HANDLE-CONDITION
+    #<SB-BSD-SOCKETS:CONNECTION-REFUSED-ERROR {B50BC71}>
+    #<USOCKET:STREAM-USOCKET {B505C99}>)
+7: (USOCKET:SOCKET-CONNECT \"localhost\" 4444)
+8: (DRAKMA:HTTP-REQUEST
+    #<PURI:URI http://localhost:4444/selenium-server/driver?cmd=getNewBrowserSession&1=*firefox&2=http%3A%2F%2Flocalhost%3A7777>)
+9: (SELENIUM::EXECUTE
+    #<PURI:URI http://localhost:4444/selenium-server/driver?cmd=getNewBrowserSession&1=*firefox&2=http%3A%2F%2Flocalhost%3A7777>)
+10: ((SB-PCL::FAST-METHOD LIFT::LIFT-TEST
+      (OVOROST-TEST::OVOROST-WEB-TEST (EQL 'OVOROST-TEST::LOGOUT-PAGE)))
+     #<unavailable argument>
+     #<unavailable argument>
+     #<unavailable argument>
+     #<unavailable argument>)
+11: ((SB-PCL::FAST-METHOD LIFT::RUN-TEST-INTERNAL (LIFT:TEST-MIXIN SYMBOL T))
+     #<unavailable argument>
+     #<unavailable argument>
+     #<OVOROST-TEST::OVOROST-WEB-TEST OVOROST-WEB-TEST {B57BC41}>
+     OVOROST-TEST::LOGOUT-PAGE
+     #<Results for /home/nicolas/src/ovorost/etc/lift-standard.config 4 Tests, 4 Errors>)
+12: ((SB-PCL::FAST-METHOD LIFT::TESTSUITE-RUN
+      (LIFT:TEST-MIXIN LIFT::TEST-RESULT))
+     #<unavailable argument>
+     #<unavailable argument>
+     #<OVOROST-TEST::OVOROST-WEB-TEST OVOROST-WEB-TEST {B57BC41}>
+     #<Results for /home/nicolas/src/ovorost/etc/lift-standard.config 4 Tests, 4 Errors>)
+13: ((SB-PCL::FAST-METHOD LIFT::DO-TESTING (LIFT:TEST-MIXIN T T))
+     #<unavailable argument>
+     #<unavailable argument>
+     #<unavailable argument>
+     #<Results for /home/nicolas/src/ovorost/etc/lift-standard.config 4 Tests, 4 Errors>
+     #<CLOSURE (LAMBDA #) {B57EBE5}>)
+14: ((SB-PCL::FAST-METHOD LIFT::DO-TESTING-IN-ENVIRONMENT
+      (LIFT:TEST-MIXIN T T))
+     #<unavailable argument>
+     #<unavailable argument>
+     #<OVOROST-TEST::OVOROST-WEB-TEST OVOROST-WEB-TEST {B57BC41}>
+     #<Results for /home/nicolas/src/ovorost/etc/lift-standard.config 4 Tests, 4 Errors>
+     #<CLOSURE (LAMBDA #) {B57EBE5}>)
+15: ((SB-PCL::FAST-METHOD LIFT::DO-TESTING-IN-ENVIRONMENT :AROUND
+      (LIFT:TEST-MIXIN T T))
+     #<unavailable argument>
+     #S(SB-PCL::FAST-METHOD-CALL
+        :FUNCTION #<FUNCTION #>
+        :PV-CELL NIL
+        :NEXT-METHOD-CALL NIL
+        :ARG-INFO (3))
+     #<OVOROST-TEST::OVOROST-WEB-TEST OVOROST-WEB-TEST {B57BC41}>
+     #<Results for /home/nicolas/src/ovorost/etc/lift-standard.config 4 Tests, 4 Errors>
+     #<CLOSURE (LAMBDA #) {B57EBE5}>)
+16: ((SB-PCL::FAST-METHOD LIFT::RUN-TESTS-INTERNAL (LIFT:TEST-MIXIN))
+     #<unavailable argument>
+     #<unavailable argument>
+     #<OVOROST-TEST::OVOROST-WEB-TEST OVOROST-WEB-TEST {B57BC41}>)
+17: ((SB-PCL::FAST-METHOD LIFT::RUN-TESTS-INTERNAL (SYMBOL))
+     #<unavailable argument>
+     #<unavailable argument>
+     OVOROST-TEST::OVOROST-WEB-TEST)
+18: ((SB-PCL::FAST-METHOD LIFT::TESTSUITE-RUN
+      (LIFT:TEST-MIXIN LIFT::TEST-RESULT))
+     #<unavailable argument>
+     #<unavailable argument>
+     #<OVOROST-TEST::OVOROST-TEST OVOROST-TEST {B3F3629}>
+     #<Results for /home/nicolas/src/ovorost/etc/lift-standard.config 4 Tests, 4 Errors>)
+19: ((SB-PCL::FAST-METHOD LIFT::DO-TESTING (LIFT:TEST-MIXIN T T))
+     #<unavailable argument>
+     #<unavailable argument>
+     #<unavailable argument>
+     #<Results for /home/nicolas/src/ovorost/etc/lift-standard.config 4 Tests, 4 Errors>
+     #<CLOSURE (LAMBDA #) {B3F7AE5}>)
+20: ((SB-PCL::FAST-METHOD LIFT::DO-TESTING-IN-ENVIRONMENT
+      (LIFT:TEST-MIXIN T T))
+     #<unavailable argument>
+     #<unavailable argument>
+     #<OVOROST-TEST::OVOROST-TEST OVOROST-TEST {B3F3629}>
+     #<Results for /home/nicolas/src/ovorost/etc/lift-standard.config 4 Tests, 4 Errors>
+     #<CLOSURE (LAMBDA #) {B3F7AE5}>)
+21: ((SB-PCL::FAST-METHOD LIFT::DO-TESTING-IN-ENVIRONMENT :AROUND
+      (LIFT:TEST-MIXIN T T))
+     #<unavailable argument>
+     #S(SB-PCL::FAST-METHOD-CALL
+        :FUNCTION #<FUNCTION #>
+        :PV-CELL NIL
+        :NEXT-METHOD-CALL NIL
+        :ARG-INFO (3))
+     #<OVOROST-TEST::OVOROST-TEST OVOROST-TEST {B3F3629}>
+     #<Results for /home/nicolas/src/ovorost/etc/lift-standard.config 4 Tests, 4 Errors>
+     #<CLOSURE (LAMBDA #) {B3F7AE5}>)
+22: ((SB-PCL::FAST-METHOD LIFT::RUN-TESTS-INTERNAL (LIFT:TEST-MIXIN))
+     #<unavailable argument>
+     #<unavailable argument>
+     #<OVOROST-TEST::OVOROST-TEST OVOROST-TEST {B3F3629}>)
+23: ((SB-PCL::FAST-METHOD LIFT::RUN-TESTS-INTERNAL (SYMBOL))
+     #<unavailable argument>
+     #<unavailable argument>
+     OVOROST-TEST)
+24: (LIFT:RUN-TESTS)
+25: (LIFT::%RUN-TESTS-FROM-FILE
+     \"/home/nicolas/src/ovorost/etc/lift-standard.config\")
+26: (LIFT::RUN-TESTS-FROM-FILE #<unavailable argument>)
+27: (LIFT:RUN-TESTS)
+28: (SB-INT:SIMPLE-EVAL-IN-LEXENV
+     (OVOROST-TEST:RUN-OVOROST-TEST)
+     #<NULL-LEXENV>)
+29: (SWANK::EVAL-REGION
+     \"(ovorost-test:run-ovorost-test)
+\")
+30: ((LAMBDA ()))
+31: (SWANK::TRACK-PACKAGE #<CLOSURE (LAMBDA #) {AE171B5}>)
+32: ((LAMBDA (SWANK-BACKEND::FN)) #<CLOSURE (LAMBDA #) {AE1719D}>)
+33: (SWANK::CALL-WITH-BUFFER-SYNTAX #<CLOSURE (LAMBDA #) {AE1719D}>)
+34: (SWANK::REPL-EVAL
+     \"(ovorost-test:run-ovorost-test)
+\")
+35: (SB-INT:SIMPLE-EVAL-IN-LEXENV
+     (SWANK:LISTENER-EVAL \"(ovorost-test:run-ovorost-test)
+\")
+     #<NULL-LEXENV>)
+36: ((LAMBDA ()))
+37: ((LAMBDA (SWANK-BACKEND::HOOK SWANK-BACKEND::FUN))
+     #<FUNCTION SWANK:SWANK-DEBUGGER-HOOK>
+     #<CLOSURE (LAMBDA #) {AE16BE5}>)
+38: ((LAMBDA ()))
+39: ((LAMBDA (SWANK-BACKEND::HOOK SWANK-BACKEND::FUN))
+     #<FUNCTION SWANK:SWANK-DEBUGGER-HOOK>
+     #<FUNCTION (LAMBDA #) {AB0BE4D}>)
+40: (SWANK::CALL-WITH-REDIRECTED-IO
+     #<SWANK::CONNECTION {ADB1271}>
+     #<CLOSURE (LAMBDA #) {AE15915}>)
+41: (SWANK::CALL-WITH-CONNECTION
+     #<SWANK::CONNECTION {ADB1271}>
+     #<FUNCTION (LAMBDA #) {AB0BE4D}>)
+42: (SWANK::HANDLE-REQUEST #<SWANK::CONNECTION {ADB1271}>)
+43: (SWANK::PROCESS-AVAILABLE-INPUT
+     #<SB-SYS:FD-STREAM for \"a constant string\" {ADB0109}>
+     #<CLOSURE (LAMBDA #) {AE158AD}>)
+44: ((FLET SWANK::HANDLER))
+45: ((LAMBDA (SWANK-BACKEND::_)) #<unused argument>)
+46: (SB-IMPL::SUB-SERVE-EVENT NIL NIL NIL)
+47: (SB-SYS:WAIT-UNTIL-FD-USABLE 0 :INPUT NIL)
+48: (SB-IMPL::REFILL-BUFFER/FD
+     #<SB-SYS:FD-STREAM for \"standard input\" {A803A69}>)
+49: (SB-IMPL::INPUT-CHAR/LATIN-9
+     #<SB-SYS:FD-STREAM for \"standard input\" {A803A69}>
+     NIL
+     #:EOF-OBJECT)
+50: (READ-CHAR
+     #<SB-SYS:FD-STREAM for \"standard input\" {A803A69}>
+     NIL
+     #:EOF-OBJECT
+     #<unused argument>)
+51: (READ-CHAR
+     #<SYNONYM-STREAM :SYMBOL SB-SYS:*STDIN* {9116E01}>
+     NIL
+     #:EOF-OBJECT
+     #<unused argument>)
+52: (READ-PRESERVING-WHITESPACE
+     #<SYNONYM-STREAM :SYMBOL SB-SYS:*STDIN* {9116E01}>
+     NIL
+     (NIL)
+     T)
+53: (READ-PRESERVING-WHITESPACE
+     #<SYNONYM-STREAM :SYMBOL SB-SYS:*STDIN* {9116E01}>
+     NIL
+     (NIL)
+     NIL)
+54: (READ #<SYNONYM-STREAM :SYMBOL SB-SYS:*STDIN* {9116E01}> NIL (NIL) NIL)
+55: (SB-IMPL::REPL-READ-FORM-FUN
+     #<SYNONYM-STREAM :SYMBOL SB-SYS:*STDIN* {9116E01}>
+     #<unavailable argument>)
+56: (SB-IMPL::REPL-FUN NIL)
+57: (SB-IMPL::REPL-FUN NIL)
+58: ((LAMBDA ()))
+59: ((LAMBDA ()))
+60: (SB-IMPL::%WITH-REBOUND-IO-SYNTAX #<CLOSURE (LAMBDA #) {AF8D6BD}>)
+61: (SB-IMPL::TOPLEVEL-REPL NIL)
+62: (SB-IMPL::TOPLEVEL-INIT)
+63: ((LABELS SB-IMPL::RESTART-LISP))
+"))
+(
+(:suite OVOROST-DAO-TEST)
+(:name DAO-VALID-DB)
+(:START-TIME-UNIVERSAL 3413906380)
+(:END-TIME-UNIVERSAL 3413906380)
+(:SECONDS 0.076d0)
+(:CONSES 109824)
+(:RESULT T))
+(
+(:suite OVOROST-DAO-TEST)
+(:name DAO-ADD-COUNTRY-TEST)
+(:START-TIME-UNIVERSAL 3413906380)
+(:END-TIME-UNIVERSAL 3413906381)
+(:SECONDS 0.414d0)
+(:CONSES 6287960)
+(:RESULT T))
+(
+(:suite OVOROST-DAO-TEST)
+(:name DAO-ADD-EXISTING-COUNTRY-TEST)
+(:START-TIME-UNIVERSAL 3413906381)
+(:END-TIME-UNIVERSAL 3413906381)
+(:SECONDS 0.203d0)
+(:CONSES 178152)
+(:RESULT T))
+(
+(:suite OVOROST-DAO-TEST)
+(:name DAO-LIST-COUNTRIES-TEST)
+(:START-TIME-UNIVERSAL 3413906381)
+(:END-TIME-UNIVERSAL 3413906382)
+(:SECONDS 0.59d0)
+(:CONSES 974656)
+(:RESULT T))
+(
+(:suite OVOROST-DAO-TEST)
+(:name DAO-ADD-REGION-TEST)
+(:START-TIME-UNIVERSAL 3413906382)
+(:END-TIME-UNIVERSAL 3413906382)
+(:SECONDS 0.237d0)
+(:CONSES 428848)
+(:RESULT T))
+(
+(:suite OVOROST-DAO-TEST)
+(:name DAO-ADD-EXISTING-REGION-TEST)
+(:START-TIME-UNIVERSAL 3413906382)
+(:END-TIME-UNIVERSAL 3413906382)
+(:SECONDS 0.309d0)
+(:CONSES 339856)
+(:RESULT T))
+(
+(:suite OVOROST-DAO-TEST)
+(:name DAO-ADD-USER-TEST)
+(:START-TIME-UNIVERSAL 3413906382)
+(:END-TIME-UNIVERSAL 3413906382)
+(:SECONDS 0.184d0)
+(:CONSES 2976456)
+(:RESULT T))
+(
+(:suite OVOROST-DAO-TEST)
+(:name DAO-ADD-USER-INVALID-TEST)
+(:START-TIME-UNIVERSAL 3413906382)
+(:END-TIME-UNIVERSAL 3413906382)
+(:SECONDS 0.184d0)
+(:CONSES 2518352)
+(:RESULT T))
+(
+(:suite OVOROST-DAO-TEST)
+(:name DAO-ADD-RESORT-INFOS-TEST)
+(:START-TIME-UNIVERSAL 3413906382)
+(:END-TIME-UNIVERSAL 3413906383)
+(:SECONDS 0.617d0)
+(:CONSES 1497712)
+(:RESULT T))
+(
+(:suite OVOROST-DAO-TEST)
+(:name DAO-ADD-EVENT-TEST)
+(:START-TIME-UNIVERSAL 3413906383)
+(:END-TIME-UNIVERSAL 3413906384)
+(:SECONDS 0.893d0)
+(:CONSES 2062936)
+(:RESULT T))
+(
+(:suite OVOROST-CONFIG-TEST)
+(:name CORRECT-CONFIG)
+(:START-TIME-UNIVERSAL 3413906384)
+(:END-TIME-UNIVERSAL 3413906384)
+(:SECONDS 0.005d0)
+(:CONSES 77752)
+(:RESULT T))
+(
+(:suite OVOROST-CONFIG-TEST)
+(:name INCORRECT-DATABASE-CONFIG)
+(:START-TIME-UNIVERSAL 3413906384)
+(:END-TIME-UNIVERSAL 3413906384)
+(:SECONDS 0.003d0)
+(:CONSES 40928)
+(:RESULT T))
+(
+(:suite OVOROST-CONFIG-TEST)
+(:name INCORRECT-WEB-CONFIG)
+(:START-TIME-UNIVERSAL 3413906384)
+(:END-TIME-UNIVERSAL 3413906384)
+(:SECONDS 0.002d0)
+(:CONSES 41088)
+(:RESULT T))
+(
+(:suite OVOROST-CONFIG-TEST)
+(:name CONDITION-INSTANCE)
+(:START-TIME-UNIVERSAL 3413906384)
+(:END-TIME-UNIVERSAL 3413906384)
+(:SECONDS 0.002d0)
+(:CONSES 65528)
+(:RESULT T))
+(
+(:TEST-CASE-COUNT 19)
+(:TEST-SUITE-COUNT 5)
+(:FAILURE-COUNT 0)
+(:ERROR-COUNT 5)
+(:EXPECTED-FAILURE-COUNT 0)
+(:EXPECTED-ERROR-COUNT 0)
+(:START-TIME-UNIVERSAL 3413906369)
+(:END-TIME-UNIVERSAL 3413906384)
+(:TESTSUITE-SUMMARY ((OVOROST-TEST::OVOROST-CONFIG-TEST :TESTCASES
+                      (OVOROST-TEST::CORRECT-CONFIG
+                       OVOROST-TEST::INCORRECT-DATABASE-CONFIG
+                       OVOROST-TEST::INCORRECT-WEB-CONFIG
+                       OVOROST-TEST::CONDITION-INSTANCE)
+                      :DIRECT-SUBSUITES NIL)
+                     (OVOROST-TEST::OVOROST-DAO-TEST :TESTCASES
+                      (OVOROST-TEST::DAO-VALID-DB
+                       OVOROST-TEST::DAO-ADD-COUNTRY-TEST
+                       OVOROST-TEST::DAO-ADD-EXISTING-COUNTRY-TEST
+                       OVOROST-TEST::DAO-LIST-COUNTRIES-TEST
+                       OVOROST-TEST::DAO-ADD-REGION-TEST
+                       OVOROST-TEST::DAO-ADD-EXISTING-REGION-TEST
+                       OVOROST-TEST::DAO-ADD-USER-TEST
+                       OVOROST-TEST::DAO-ADD-USER-INVALID-TEST
+                       OVOROST-TEST::DAO-ADD-RESORT-INFOS-TEST
+                       OVOROST-TEST::DAO-ADD-EVENT-TEST)
+                      :DIRECT-SUBSUITES NIL)
+                     (OVOROST-TEST::OVOROST-WEB-TEST :TESTCASES
+                      (OVOROST-TEST::ABOUT-PAGE OVOROST-TEST::INDEX-PAGE
+                       OVOROST-TEST::NEWS-PAGE OVOROST-TEST::LOGIN-PAGE
+                       OVOROST-TEST::LOGOUT-PAGE)
+                      :DIRECT-SUBSUITES NIL)
+                     (OVOROST-TEST::OVOROST-API-TEST :TESTCASES NIL
+                      :DIRECT-SUBSUITES NIL)
+                     (OVOROST-TEST::OVOROST-TEST :TESTCASES NIL
+                      :DIRECT-SUBSUITES
+                      (OVOROST-TEST::OVOROST-API-TEST
+                       OVOROST-TEST::OVOROST-WEB-TEST
+                       OVOROST-TEST::OVOROST-DAO-TEST
+                       OVOROST-TEST::OVOROST-CONFIG-TEST))))
+)

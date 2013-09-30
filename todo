@@ -1,0 +1,27 @@
+------------
+-- Ovorost --
+------------
+
+** DB **
+
+* Users *
+  Implements the database for the  manipulation of the users (add, del
+  and find).
+
+
+** FEATURES **
+
+* Integrates French Ski stations
+* Regroup
+
+** DEVEL **
+
+* macro : ouverture et lecture d un fichier csv.
+  (with-resort-file (lat lng name) filename
+
+
+
+Local variables:
+mode: outline
+paragraph-separate: "[  ^L]*$"
+end:

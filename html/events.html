@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title> Ovorost </title>
+
+<link rel="stylesheet" type="text/css" href="/css/ovorost.css" />
+<link rel="stylesheet" type="text/css" href="/css/dashboard.css" media="screen" />
+
+
+<script type="text/javascript" src="/js/mootools.js" ></script>
+<script type="text/javascript" src="/js/calendar.rc4.js" ></script>
+
+
+<script language="javascript" type="text/javascript">
+<!--
+
+// -->
+</script>
+
+<script type="text/javascript">
+//<![CDATA[
+window.addEvent('domready',
+   function() { myCal = new Calendar({ dateFrom: 'd/m/Y' },
+                                     { classes: ['dashboard'], direction: 1 }); });
+window.addEvent('domready',
+   function() { myCal = new Calendar({ dateTo: 'd/m/Y' },
+                                     { classes: ['dashboard'], direction: 1 }); });
+//]]>
+</script>
+
+
+
+</head>
+
+<body>
+
+<!-- TMPL_INCLUDE 'header.html' -->
+
+<div id="events">
+<b><!-- TMPL_VAR i18n_event --></b>
+</div>
+
+<div id="user-events">
+  <ul>
+    <!-- TMPL_LOOP events -->
+    <li>
+    <!-- TMPL_VAR title --> -  <!-- TMPL_VAR begin_date --> - <!-- TMPL_VAR end_date -->
+   </li>
+   <!-- /TMPL_LOOP -->
+   </ul>
+</div>
+
+
+<form name="add-event" method="post" action="add-event">
+
+<div id="event-info"> <!-- TMPL_VAR i18n_title --> :
+<input type="text" name="title" id="entry-info" size="56" maxlength="70">
+</div>
+
+<div id="event-info">
+  <span>
+  <!-- TMPL_VAR i18n_from --> :
+  <input type="text" name="from" id="dateFrom" class="entry-info" size="16" maxlength="32">
+  </span>
+  <span>
+  <!-- TMPL_VAR i18n_to --> :
+  <input type="text" name="to" id="dateTo" class="entry-info" size="16" maxlength="32">
+  </span>
+</div>
+
+<div id="event-info">
+<!-- TMPL_VAR i18n_resort --> :
+<select name="resort">
+<!-- TMPL_LOOP resorts -->
+<option value="<!-- TMPL_VAR name -->" <!-- TMPL_VAR selected -->> <!-- TMPL_VAR name --></option>
+<!-- /TMPL_LOOP -->
+</select>
+</div>
+
+<div id="event-info"> <!-- TMPL_VAR i18n_tags --> :
+<input type="text" name="tags" id="entry-info" size="56" maxlength="70">
+</div>
+
+<div id="event-info">
+<!-- TMPL_VAR i18n_note -->
+<select name="note">
+<option value="1"> 1 </option>
+<option value="2"> 2 </option>
+<option value="3"> 3 </option>
+<option value="4"> 4 </option>
+<option value="5"> 5 </option>
+<option value="6"> 6 </option>
+<option value="7"> 7 </option>
+<option value="8"> 8 </option>
+<option value="9"> 9 </option>
+<option value="10"> 10 </option>  
+</select>
+</div>
+
+<div id="event-info">
+<!-- TMPL_VAR i18n_content --> :
+  <textarea name="content" rows="10" cols="40"></textarea>
+</div>
+
+<div id="event-info">
+  <!-- TMPL_VAR i18n_public --> :
+  <input type="checkbox" name="public-p">
+</div>
+
+<br/>
+
+<input type="image" src="/img/bt-<!-- TMPL_VAR lang -->-add.png" alt="Connect">
+
+</form>
+
+
+
+<!-- TMPL_INCLUDE 'footer.html' -->
+

@@ -1,0 +1,103 @@
+-------------
+-- Ovorost --
+-------------
+
+** Google Maps **
+
+You could download a new Google maps key here :
+http://www.google.com/apis/maps/signup.html
+
+
+
+** Ski resorts informations **
+
+Ski resorts informations from Wikipedia:
+http://en.wikipedia.org/wiki/Category:Ski_areas_and_resorts_by_country
+
+Each file in var/country contains :
+longitude;latitude,name;website;snow informations url
+
+
+
+** Ovorost development **
+
+Load the system :
+
+CL-USER> (asdf:oos 'asdf:load-op :ovorost)
+
+Launch the unit test with sb-cover (in a new lisp system) :
+
+
+ (loop for system in '(:hunchentoot 
+                               :html-template
+                               :cl-smtp 
+                               :cl-l10n 
+                               :drakma 
+                               :cl-ppcre 
+                               :clsql-postgresql 
+                               :cl-json 
+                               :cl-google-chart
+                               :lift
+                               :selenium
+                               :sb-cover)
+            do (asdf:oos 'asdf:load-op system))
+
+ (declaim (optimize sb-cover:store-coverage-data))
+ (asdf:oos 'asdf:load-op :ovorost-test)
+ (ovorost-test:run-ovorost-test)
+ (sb-cover:report "/tmp/report/")
+ (declaim (optimize (sb-cover:store-coverage-data 0)))
+
+
+
+                               
+** Ovorost **
+
+Set up a new Ovorost system :
+
+CL-USER> (defparameter *ovorost* (ovorost-web::make-ovorost 'dev))
+CL-USER> (ovorost-dao:init *ovorost*)
+
+Start, stop the web site from REPL : 
+
+CL-USER> (ovorost-web:start *ovorost*)
+CL-USER> (ovorost-web:stop *ovorost*)
+
+
+
+** Ovorost API *
+
+Ovorost comes with a REST API :
+
+URI : http://www.ovorost.com/api
+
+- [GET] /news 
+Retreive last news from Ovorost web site.
+
+- [GET] /user
+Parameter : email
+Get user's informations.
+
+- [POST] /user
+Parameters : email, password, first name, last name, longitude and
+latitude.
+Update user's informations.
+
+- [GET] /event
+Parameter : email
+Get user's ski events.
+
+- [POST] /event
+Parameters : email, password, title, begin and end date, resort's name
+and note.
+Add a ski event to an user.
+
+- [GET] /resorts
+Get ski resorts informations.
+
+
+
+Local variables:
+mode: outline
+paragraph-separate: "[  ^L]*$"
+end:

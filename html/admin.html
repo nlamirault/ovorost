@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title> Ovorost </title>
+
+<link rel="stylesheet" type="text/css" href="/css/ovorost.css" />
+
+<script language="javascript" type="text/javascript">
+<!--
+
+
+function selectUser() {
+
+    var idUser = document.admin.user.options[document.admin.user.selectedIndex].value;
+    document.admin.id.value = idUser;
+    document.admin.submit();
+}
+
+// -->
+</script>
+
+</head>
+
+<body>
+
+<!-- TMPL_INCLUDE 'header.html' -->
+
+
+<div id="account">
+
+
+<div id="welcome">
+  <b> Ovorost <!-- TMPL_VAR i18n_admin --> </b>
+</div>
+
+
+
+
+<form name="admin" method="post" action="admin">
+
+<input type="hidden" name="id">
+<div id="admin-users">
+  <h2> <!-- TMPL_VAR i18n_users --> </h2>
+
+  <select name="user" onChange="selectUser()">
+    <!-- TMPL_LOOP users -->
+    <option value="<!-- TMPL_VAR id -->" <!-- TMPL_VAR selected -->> <!-- TMPL_VAR first_name --> <!-- TMPL_VAR last_name --></option>
+      <!-- /TMPL_LOOP -->
+  </select>
+
+</div>
+
+</form>
+
+
+
+<form name="user" method="post" action="update-user">
+
+<div id="admin-user">
+  
+<input type="hidden" name="id" value="<!-- TMPL_VAR id -->">
+
+<div id="admin-user-info"> <!-- TMPL_VAR i18n_email --> :
+<input type="text" name="email" id="entry-info" value="<!-- TMPL_VAR email -->" size="30" maxlength="30">
+</div>
+
+<div id="admin-user-info"> <!-- TMPL_VAR i18n_password -->  :
+<input type="text" name="password" id="entry-info" value="<!-- TMPL_VAR password -->" size="30" maxlength="30">
+</div>
+
+<div id="admin-user-info"> <!-- TMPL_VAR i18n_firstname -->  :
+<input type="text" name="first-name" id="entry-info" value="<!-- TMPL_VAR first_name -->" size="30" maxlength="30">
+</div>
+
+<div id="admin-user-info"> <!-- TMPL_VAR i18n_lastname -->  :
+<input type="text" name="last-name" id="entry-info" value="<!-- TMPL_VAR last_name -->" size="30" maxlength="30">
+</div>
+
+<div id="admin-user-info"> <!-- TMPL_VAR i18n_latitude --> :
+<input type="text" name="latitude" id="entry-info" value="<!-- TMPL_VAR latitude -->" size="30" maxlength="30">
+</div>
+
+<div id="admin-user-info"> <!-- TMPL_VAR i18n_longitude --> :
+<input type="text" name="longitude" id="entry-info" value="<!-- TMPL_VAR longitude -->" size="30" maxlength="30">
+</div>
+
+<div id="admin-user-info"> <!-- TMPL_VAR i18n_enabled -->  :
+<input type="checkbox" name="active-p" id="entry-info" <!-- TMPL_VAR active_p -->>
+</div>
+
+
+<div id="admin-user-info"> <!-- TMPL_VAR i18n_sex -->  :
+<select name="sex">
+<option value="M" <!-- TMPL_VAR male_selected -->> <!-- TMPL_VAR i18n_male -->  </option>
+<option value="F" <!-- TMPL_VAR female_selected -->> <!-- TMPL_VAR i18n_female --> </option>
+</select>
+</div>
+
+<br/>
+
+</div>
+
+<input type="image" src="/img/bt-<!-- TMPL_VAR lang -->-update.png" alt="Update">
+<!--
+&nbsp;
+<input type="image" src="/img/bt-delete.png" alt="Delete">
+-->
+</div>
+
+</form>
+
+
+
+<div id="admin-events">
+  <h2> Events </h2>  
+<table width="100%">
+  <tr>
+    <th align="center"><!-- TMPL_VAR i18n_event_title --></th>
+    <th align="center"><!-- TMPL_VAR i18n_event_begin --></th>
+    <th align="center"><!-- TMPL_VAR i18n_event_end --></th>
+    <th align="center"><!-- TMPL_VAR i18n_event_resort --></th>
+    <th align="center"><!-- TMPL_VAR i18n_event_note --></th>
+  </tr>
+  <!-- TMPL_LOOP events -->
+  <tr>
+    <td align="center"><!-- TMPL_VAR title --></td>
+    <td align="center"><!-- TMPL_VAR begin --></td>
+    <td align="center"><!-- TMPL_VAR end --></td>
+    <td align="center"><!-- TMPL_VAR resort --></td>
+    <td align="center"><!-- TMPL_VAR note --></td>
+  </tr>
+  <!-- /TMPL_LOOP -->
+</table>
+
+</div>
+
+
+
+
+<!-- TMPL_INCLUDE 'footer.html' -->
+

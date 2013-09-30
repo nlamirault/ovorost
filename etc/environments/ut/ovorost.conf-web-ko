@@ -1,0 +1,12 @@
+;;
+;; Ovorost Configuration file
+;;
+
+(setf *config*
+      '((:env "local")
+        (:port 8888)
+        (:sql (:host "localhost")
+              (:database "ovorost_local")
+              (:login "root")
+              (:password "mangoule"))))
+
